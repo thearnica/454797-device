@@ -1,0 +1,37 @@
+   @font-face {
+			font-family: "GilroyExtraBold";
+			src:url("../fonts/web/gilroyextrabold.woff") format("truetype");
+            src:url("../fonts/web/gilroyextrabold.woff2") format("truetype");
+            src:url("../fonts/gilroy/Gilroyextrabold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "GilroyLight";
+			src:url("../fonts/web/gilroylight.woff") format("truetype"); 
+            src:url("../fonts/web/gilroylight.woff2") format("truetype");
+            src:url("../fonts/gilroy/Gilroylight.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "OpenSans";
+			src:url("../fonts/web/opensans.woff") format("truetype");
+            src:url("../fonts/web/opensans.woff2") format("truetype");
+            src:url("../fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "OpenSansLight";
+			src:url("../fonts/web/opensanslight.woff") format("truetype");
+            src:url("../fonts/web/opensanslight.woff2") format("truetype");
+            src:url("../fonts/open_sans/OpenSans-Light.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	
