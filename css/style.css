@@ -1,5 +1,6 @@
 body{
     font-style: normal;
+    font-weight:normal;
     font-size: 15px;
     font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
     color: rgba(0,0,0,1);
@@ -7,13 +8,16 @@ body{
 }
 .popular-title{
     font-size: 18px;
+    line-height: 1.2;
     font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;  
 }
 .services-title{
     font-size: 47px;
+    line-height: 1.2;
     font-family: "GilroyExtraBold","Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 .catalog-title{
     font-size: 47px;
+    line-height: 1.2;
     font-family: "GilroyExtraBold","Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
 }
