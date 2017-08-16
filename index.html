@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header>
       <nav class="navigation">
-        <a class="logo-header"><img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип интернет-магазина Девайс"/></a>
+        <a class="logo-header"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина Девайс"/></a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <input class="search-field" type="search" name="search" value="Поиск по сайту"/>
           <button class="btn btn-search" type="submit">Найти</button>
         </form>
-        <ul class="profile-navigation-list profile-navigation-list-login profile-navigation-list-current">
+        <ul class="profile-navigation-list profile-navigation-list-login">
           <li class="profile-navigation-item profile-navigation-item-login"><a href="#">Войти</a></li>
         </ul>
-        <ul class="profile-navigation-list profile-navigation-list-logout">
+        <ul class="profile-navigation-list profile-navigation-list-logout profile-navigation-list-uncurrent">
           <li class="user-navigation-item profile-navigation-item-profile"><a href="#">Валентин Петухов</a></li>
           <li class="user-navigation-item profile-navigation-item-logout"><a href="#">Выйти</a></li>
         </ul>
@@ -29,7 +30,7 @@
             <a href="#">Каталог товаров</a>
             <ul class="catalog-menu-list">
               <li class="catalog-menu-item"><a href="#">Виртуальная реальность</a></li>
-              <li class="catalog-menu-item"><a href="#">Моноподы для селфи</a></li>
+              <li class="catalog-menu-item"><a href="catalog.html">Моноподы для селфи</a></li>
               <li class="catalog-menu-item"><a href="#">Экшн-камеры</a></li>
               <li class="catalog-menu-item"><a href="#">Фитнес-браслеты</a></li>
               <li class="catalog-menu-item"><a href="#">Умные часы</a></li>
@@ -78,7 +79,7 @@
                 <th>Материал</th>
               </tr>
             </table>
-            <img class="slider-photo" src="http://placehold.it/150x100" width="150" height="100" alt="Монопод"/> 
+            <img class="slider-photo" src="img/slider-1.png" width="384" height="486" alt="Монопод"/> 
           </li>
           <li class="slider-item">
               <span class="slider-title-number">02</span>
@@ -98,7 +99,7 @@
                   <th>Без подзарядки</th>
                 </tr>
               </table>
-              <img class="slider-photo" src="http://placehold.it/150x100" width="150" height="100" alt="Часы"/>
+              <img class="slider-photo" src="img/slider-2.png" width="345" height="485" alt="Часы"/>
           </li>
           <li class="slider-item">
               <span class="slider-title-number">03</span>
@@ -120,7 +121,7 @@
                   <th>Радиус поражения</th>
                 </tr>
               </table>
-              <img class="slider-photo" src="http://placehold.it/150x100" width="150" height="100" alt="Квадрокоптер"/>
+              <img class="slider-photo" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер"/>
           </li>
         </ol>
       </section>
@@ -183,16 +184,16 @@
         <h2 class="visually-hidden">Наши бренды</h2>
         <ul class="brand-list">
           <li class="brand-item">
-            <a href="#"><img src="http://placehold.it/150x100" width="150" height="100" alt="Бренд №1"/></a>
+            <a href="#"><img src="img/logo-1.png" width="260" height="100" alt="Бренд №1"/></a>
           </li>
           <li class="brand-item">
-            <a href="#"><img src="http://placehold.it/150x100" width="150" height="100" alt="Бренд №2"/></a>
+            <a href="#"><img src="img/logo-2.png" width="260" height="100" alt="Бренд №2"/></a>
           </li>
           <li class="brand-item">
-            <a href="#"><img src="http://placehold.it/150x100" width="150" height="100" alt="Бренд №3"/></a>
+            <a href="#"><img src="img/logo-3.png" width="260" height="100" alt="Бренд №3"/></a>
           </li>
           <li class="brand-item">
-            <a href="#"><img src="http://placehold.it/150x100" width="150" height="100" alt="Бренд №4"/></a>
+            <a href="#"><img src="img/logo-4.png" width="260" height="100" alt="Бренд №4"/></a>
           </li>
         </ul>
       </section>
@@ -221,11 +222,11 @@
     </main>
 
     <footer>
-      <a class="logo-footer"><img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип интернет-магазина Девайс"/></a>
-      <ul class="footer-profile-navigation-list footer-profile-navigation-list-login footer-profile-navigation-list-current">
+      <a class="logo-footer"><img src="img/logo-device-footer.svg" width="162" height="36" alt="Логотип интернет-магазина Девайс"/></a>
+      <ul class="footer-profile-navigation-list footer-profile-navigation-list-login">
         <li class="footer-profile-navigation-item footer-profile-navigation-item-login"><a href="#">Войти</a></li>
       </ul>
-      <ul class="footer-profile-navigation-list footer-profile-navigation-list-logout">
+      <ul class="footer-profile-navigation-list footer-profile-navigation-list-logout footer-profile-navigation-list-uncurrent">
         <li class="footer-profile-navigation-item footer-profile-navigation-item-logout"><a href="#">Выйти</a></li>
       </ul>
       <ul class="footer-user-navigation-list">
@@ -240,11 +241,11 @@
       </ul>
       <p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
       <ul class="social-list">
-        <li class="social-item"><a href="#">Facebook</a></li>
-        <li class="social-item"><a href="#">Instagram</a></li>
-        <li class="social-item"><a href="#">Twitter</a></li>
+        <li class="social-item"><a href="#"><img src="img/fb.svg" width="27" height="34" alt="Facebook"></a></li>
+        <li class="social-item"><a href="#"><img src="img/vk.svg" width="27" height="34" alt="Instagram"></a></li>
+        <li class="social-item"><a href="#"><img src="img/twitter.svg" width="27" height="34" alt="Twitter"></a></li>
       </ul>
-      <a class="academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      <a class="academy" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy"></a>
     </footer>
 
     <section class="modal modal-feedback">
