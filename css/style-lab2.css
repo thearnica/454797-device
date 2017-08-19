@@ -519,7 +519,7 @@ a{
     position: relative;
     min-height: 286px;
     padding-bottom:70px;
-    margin-bottom: 100px;
+    margin-bottom: 93px;
 }
 .services::after{
     content: "";
@@ -584,10 +584,7 @@ a{
     width: 280px;
     height: 40px;
     background-color: #000000;
-}    
-.services-slider-controls label:last-child{
-    margin-bottom:0;
-}
+} 
 #service-slide-1:hover ~ .services-slider-controls label[for="service-slide-1"]::before,
 #service-slide-2:hover ~ .services-slider-controls label[for="service-slide-2"]::before,
 #service-slide-3:hover ~ .services-slider-controls label[for="service-slide-3"]::before,
@@ -656,4 +653,24 @@ a{
     margin: 0;
     line-height: 30px;
     letter-spacing: 0.02em;
+}
+.brandname {
+    width: 1160px;
+    margin: 0 auto;
+}
+.brand-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.brand-item {
+    filter: grayscale(100%);
+    opacity: 0.2;
+    transition-property: filter, opacity;
+    transition-duration: 300ms;
+}
+.brand-item:hover,
+.brand-item:focus {
+    filter: grayscale(0%);
+    opacity: 1;
 }
