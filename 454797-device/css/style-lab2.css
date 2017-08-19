@@ -1,0 +1,676 @@
+body{
+    position: relative;
+    min-width:1160px;
+    padding: 0 20px;
+    margin: 0;
+    font-style: normal;
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    text-align: left;
+    color: rgba(0,0,0,1);
+}
+/*
+.debug form,
+.debug ul,
+.debug li,
+.debug h1,
+.debug h2,
+.debug h3,
+.debug ol,
+.debug p,
+.debug span,
+.debug input,
+.debug div{
+    box-shadow: 0 0 1px black;
+}*/
+.debug .grid_div{
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin-left:50%;
+    width:0px;
+    border-left:1px solid rgba(250,100,100,0.5);
+    box-shadow: none;
+}
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.visually-hidden{
+    display: none;
+}
+.navigation{
+    position: relative;
+    width: 1040px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top:40px;
+    padding: 0 60px;
+    background-color: #f7e296;
+}
+.navigation a{
+    display: inline-block;
+}
+.logo-header{
+    position: absolute;
+    top:-20px;
+    left:60px;
+    width: 165px;
+    height: 40px;
+}
+.top-navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding-top: 30px;
+    height: 56px;
+}
+.search-form{
+    position: relative;
+    flex: calc(540/220);
+    width: 440px;
+    height: 56px;
+}
+.search-field{
+    position: relative;
+    z-index: 1;
+    width: 315px;
+    height: 52px;
+    margin-left:40px;
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: rgba(0,0,0,1);
+    letter-spacing: 0.01em;
+    border: none;
+    background-color: #f7e296;
+    opacity: 0;
+}
+.btn-search{
+    position: absolute;
+    top:0;
+    left:355px;
+    display: none;
+    height: 56px;
+    width: 85px;
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.01em;
+    border: 2px solid #000000;
+    background-color: #f7e296;
+}
+.search-icon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 316px;
+    height: 37px;
+    padding-left: 39px;
+}
+.search-icon label{
+    position: relative;
+    color: rgba(0,0,0,0.3);
+    letter-spacing: 0.01em;
+}
+.search-icon label::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: -39px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/search.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.search-field:hover ~ .search-icon label{
+    color: rgba(0,0,0,0.6);
+}
+.search-field:focus,
+.search-field:valid{
+    opacity: 1;
+    color: rgba(0,0,0,1);
+}
+.search-field:focus ~ .search-icon,
+.search-field:valid ~ .search-icon{
+    color: rgba(0,0,0,0);
+    border-bottom:2px solid #000000;
+}
+.search-field:focus ~ .btn-search,
+.search-field:valid ~ .btn-search{
+    display: block;
+}
+.btn-search:hover,
+.btn-search:focus{ 
+    background-color: #000000;
+    color:rgba(255,255,255,1);
+}
+.btn-search:active{
+    background-color: #000000;
+    color:rgba(255,255,255,0.3);
+}
+.profile-navigation-list{
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex:calc(280/220);
+}
+.profile-navigation-list-current{
+    display: flex;
+}
+.profile-navigation-item{
+    max-width: 170px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.profile-navigation-list li{
+    margin-right: 20px;
+}
+.user-navigation-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex:calc(220/220);
+}
+.profile-navigation-item,
+.user-navigation-item{
+    position: relative;
+}
+.profile-navigation-item a,
+.user-navigation-item a{
+    padding-left: 27px;
+}
+.profile-navigation-item::after,
+.user-navigation-item::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 15px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.profile-navigation-item::after{
+    top:12%;
+    left: -4px;
+    background-image: url("../img/user.svg");
+}
+.user-navigation-item.user-navigation-item-compare::after{
+    top:15%;
+    left:2px;
+    background-image: url("../img/compare.svg");
+}
+.user-navigation-item.user-navigation-item-cart::after{
+    top:10%;
+    left:0;
+    background-image: url("../img/cart.svg");
+}
+.logo-header:hover,
+.profile-navigation-list a:hover,
+.user-navigation-list a:hover{
+    opacity: 0.6;
+}
+.logo-header:focus,
+.profile-navigation-list a:focus,
+.user-navigation-list a:focus{
+    opacity: 0.6;
+}
+.logo-header:active,
+.profile-navigation-list a:active,
+.user-navigation-list a:active{
+    opacity: 0.3;
+}
+.site-navigation-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50px;
+    font-size: 18px;
+    font-family:"GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.site-navigation-list a:hover,
+.site-navigation-list a:focus{
+    color:rgba(0,0,0,0.6);
+}
+.site-navigation-list a:active{
+    color:rgba(0,0,0,0.3);
+}
+.site-navigation-item-catalog{
+    position: relative;
+    flex:calc(540/160);
+}
+.site-navigation-item-catalog a{
+    padding-right: 20px;
+}
+.site-navigation-item-catalog::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 230px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/plus.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+.catalog-menu{
+    position: absolute;
+    top:22px;
+    left: -60px;
+    z-index: 1;
+    display: none;
+    width: 1040px;
+    min-height: 110px;
+    padding: 27px 60px;
+    font-size: 15px;
+    line-height: 36px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    text-transform: none;
+    letter-spacing: 0;
+    background-color: #f7e296;
+} 
+.catalog-menu-list{
+    flex-basis: 240px;
+} 
+.site-navigation-item-catalog:hover .catalog-menu,
+.site-navigation-item-catalog a:focus ~ .catalog-menu{
+    display: flex;
+}  
+.site-navigation-item-delivery{
+    flex:calc(160/160);;
+}
+.site-navigation-item-warranty{
+    flex:calc(160/160);;
+}
+.site-navigation-item-contacts{
+    flex:calc(184/160);;
+    text-align: right;
+    margin-right: -0.2em;
+} 
+.slider{
+    position: relative;
+    width: 1160px;
+    margin: 0 auto;
+    margin-top: -126px;
+    margin-bottom: 100px;
+}
+.slider-box{
+    position: relative;
+}
+.slider-controls{
+    position: absolute;
+    bottom:150px;
+    right: 83px;
+}
+.slider-controls label{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 18px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 1px #000000;
+    border-radius: 50%;
+}
+.slider-controls label:last-child{
+    margin-right: 0
+}
+#slide-1:checked ~ .slider-controls label[for="slide-1"],
+#slide-2:checked ~ .slider-controls label[for="slide-2"],
+#slide-3:checked ~ .slider-controls label[for="slide-3"]{
+    box-shadow: 0 0 0 1px #000000, inset 0 0 0 1px #000000;
+}
+#slide-1:checked ~ .slider-list .slider-item:first-child{
+    display: flex;
+}
+#slide-2:checked ~ .slider-list .slider-item:nth-child(2){
+    display: flex;
+}
+#slide-3:checked ~ .slider-list .slider-item:last-child{
+    display: flex;
+}
+.slider-item{
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 1160px;
+}
+.slider-item-photo{
+    margin: 0 auto;
+    margin-top:15px;
+}
+.slider-item-content{
+    flex-basis: 560px;
+    padding-left: 40px;
+}
+.slider-title{
+    position: relative;
+    min-height: 205px;
+    margin: 0;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.03em;
+}
+.slider-title-number{
+    position: absolute;
+    top:0;
+    right: 50px;
+    font-size: 179px;
+    line-height: 179px;
+    color:  white;
+}
+.slider-title::before{
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: block;
+    width: 100px;
+    border-top: 8px solid white;
+}
+.slider-title-caption{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 47px;
+    line-height: 55px;
+}
+.slider-description{
+    min-height: 70px;
+    margin-top: 20px;
+    margin-bottom: 33px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #464646;
+}
+.btn-slider{
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    margin-bottom: 47px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+}
+.btn-slider::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 220px;
+    box-shadow: 0 0 0 4px #f0c52e;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+}
+.btn-slider:hover::before{
+    box-shadow: 0 0 0px 20px #f0c52e;
+}
+.btn-slider:focus::before{
+    box-shadow: 0 0 0px 20px #f0c52e;
+}
+.btn-slider:active::before{
+    box-shadow: 0 0 0px 20px #f0c52e; 
+}
+.btn-slider:active{
+    color: rgba(0, 0, 0, 0.3)
+}  
+.slider-specification{
+    border-collapse: collapse;
+    letter-spacing: 0.01em;
+}
+.slider-specification tr:first-child{
+    height: 35px;
+}
+.slider-specification tr:last-child{
+    height: 45px;
+}
+.slider-specification td:first-child{
+    width: 160px;
+} 
+.slider-specification td:nth-child(2){
+    width: 140px;
+}   
+.slider-specification td{
+    padding: 0;
+    font-size: 36px;
+    font-family: "GilroyLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.slider-specification th{
+    font-size: 13px;
+    color: #464646;
+} 
+.popular{
+    margin-bottom: 73px;
+}
+.popular-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1160px;
+    margin: 0 auto;
+}
+.popular-item{
+    position: relative;
+    width: 160px;
+    height: 90px;
+    padding-top:160px;
+}
+.popular-title h3{
+    margin: 0;
+    margin-top: 34px;
+    font-size: 18px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.01em;
+}
+.popular-title::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    background-color: #f7e296;
+}
+.popular-title::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
+}
+.popular-title.popular-title-1::after{
+    background-image: url("../img/popular-1.svg");
+    background-position: 50% 50%;
+}
+.popular-title.popular-title-2::after{
+    background-image: url("../img/popular-2.svg");
+    background-position: 50% 95%;
+}
+.popular-title.popular-title-3::after{
+    background-image: url("../img/popular-3.svg");
+    background-position: 55% 50%;
+}
+.popular-title.popular-title-4::after{
+    background-image: url("../img/popular-4.svg");
+    background-position: 55% 53%;
+}
+.popular-title.popular-title-5::after{
+    background-image: url("../img/popular-5.svg");
+    background-position: 53% 53%;
+}
+.popular-title.popular-title-6::after{
+    background-image: url("../img/popular-6.svg");
+    background-position: 50% 53%;
+}
+.popular-item:hover .popular-title::before,
+.popular-item:focus .popular-title::before,
+.popular-item:active .popular-title::before{
+    background-color: #f0c52e;
+}
+.popular-item:active .popular-title h3,
+.popular-item:active .popular-title::after{
+    opacity: 0.3;
+}
+.services{
+    position: relative;
+    min-height: 286px;
+    padding-bottom:70px;
+    margin-bottom: 100px;
+}
+.services::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top:100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e5e5e5;
+}
+.services-slider-box{
+    display: flex;
+    flex-direction: row;
+    width: 1160px;
+    margin: 0 auto;
+    min-height: 318px;
+}
+.services-slider-controls{
+    flex: calc(280/280);
+    padding-top: 80px;
+    padding-bottom: 65px;
+    border-right: 4px solid #000000;
+}
+.services-slider-controls label{
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 160px;
+    height: 40px;
+    margin-bottom:24px;
+    font-size: 18px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 0.2em;
+    overflow: hidden;    
+}
+.services-slider-controls label:last-child{
+    margin-bottom:0;
+}
+.services-slider-controls label::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 220px;
+    box-shadow: 0 0 0 4px #f0c52e;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+}
+.services-slider-controls label::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+    width: 280px;
+    height: 40px;
+    background-color: #000000;
+}    
+.services-slider-controls label:last-child{
+    margin-bottom:0;
+}
+#service-slide-1:hover ~ .services-slider-controls label[for="service-slide-1"]::before,
+#service-slide-2:hover ~ .services-slider-controls label[for="service-slide-2"]::before,
+#service-slide-3:hover ~ .services-slider-controls label[for="service-slide-3"]::before,
+#service-slide-1:focus ~ .services-slider-controls label[for="service-slide-1"]::before,
+#service-slide-2:focus ~ .services-slider-controls label[for="service-slide-2"]::before,
+#service-slide-3:focus ~ .services-slider-controls label[for="service-slide-3"]::before{
+    width: 220px;
+    box-shadow: 0 0 0px 20px #f0c52e;
+}
+#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"],
+#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"],
+#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"]{
+    color: #f7e184;
+    overflow: visible; 
+}
+#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"]::before,
+#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"]::before,
+#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"]::before{
+    display: none;
+}
+#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"]::after,
+#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"]::after,
+#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"]::after{
+    display: block;
+}
+#service-slide-1:checked ~ .services-slider-list .services-slider-item-delivery{
+    display: block;
+}
+#service-slide-2:checked ~ .services-slider-list .services-slider-item-warranty{
+    display: block;
+}
+#service-slide-3:checked ~ .services-slider-list .services-slider-item-credit{
+    display: block;
+}
+.services-slider-list{
+    flex: calc(880/280);
+}
+.services-slider-item{
+    display: none;
+    padding-top: 68px;
+    padding-bottom: 20px;
+    padding-left:118px;
+    padding-right: 300px;
+    background-repeat: no-repeat;
+}
+.services-slider-item.services-slider-item-delivery{
+    background-position: 675px 85px;
+    background-image: url("../img/delivery.svg");
+}
+.services-slider-item.services-slider-item-warranty{
+    background-position: 660px 60px;
+    background-image: url("../img/warranty.svg");
+}
+.services-slider-item.services-slider-item-credit{
+    background-position: 650px 60px;
+    background-image: url("../img/credit.svg");
+}
+.services-slider-item h3{
+    margin: 0;
+    margin-bottom: 26px;
+    font-size: 47px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.02em;
+}
+.services-slider-item p{
+    margin: 0;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+}
