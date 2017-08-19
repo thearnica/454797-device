@@ -11,25 +11,23 @@
 
     <header>
       <nav class="navigation">
-        <a class="logo-header"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина Девайс"/></a>
+        <a class="logo-header" href="#"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина Девайс"/></a>
         <div class="top-navigation">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
               <input class="search-field" id="search-field" type="search" name="search" required/>
+              <label class="search-icon" for="search-field">Поиск по сайту</label>
               <button class="btn-search" type="submit">Найти</button>
-              <div class="search-icon">
-                <label for="search-field">Поиск по сайту</label>
-              </div>
             </form>
             <ul class="profile-navigation-list">
-              <li class="profile-navigation-item"><a href="#">Войти</a></li>
+              <li class="profile-navigation-item login-link"><a href="#">Войти</a></li>
             </ul>
             <ul class="profile-navigation-list profile-navigation-list-current">
-              <li class="profile-navigation-item"><a href="#">Валетин Петухов</a></li>
-              <li><a href="#">Выйти</a></li>
+              <li class="profile-navigation-item profile-link"><a href="#">Валетин Петухов</a></li>
+              <li class="profile-navigation-item logout-link"><a href="#">Выйти</a></li>
             </ul>
             <ul class="user-navigation-list">
-              <li class="user-navigation-item user-navigation-item-compare"><a href="#">Сравнить</a></li>
-              <li class="user-navigation-item user-navigation-item-cart"><a href="#">Корзина</a></li>
+              <li class="user-navigation-item compare-link"><a href="#">Сравнить</a></li>
+              <li class="user-navigation-item cart-link"><a href="#">Корзина</a></li>
             </ul>
         </div>
         <ul class="site-navigation-list">
@@ -67,9 +65,9 @@
           <input class="visually-hidden" id="slide-2" type="radio" name="slider-radio" value="clock"/>
           <input class="visually-hidden" id="slide-3" type="radio" name="slider-radio" value="dron"/>
           <div class="slider-controls">
-            <label for="slide-1" tabindex="0"></label>
-            <label for="slide-2" tabindex="0"></label>
-            <label for="slide-3" tabindex="0"></label>
+            <label for="slide-1"></label>
+            <label for="slide-2"></label>
+            <label for="slide-3"></label>
           </div>
           <ol class="slider-list">
           <li class="slider-item">
@@ -158,22 +156,22 @@
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list">
           <li class="popular-item">
-            <a class="popular-title popular-title-1" href="#.html"><h3>Виртуальная реальность</h3></a>
+            <a class="popular-item-link" href="#.html"><h3 class="popular-item-title popular-item-title-1">Виртуальная реальность</h3></a>
           </li>
           <li class="popular-item">
-            <a class="popular-title popular-title-2" href="catalog.html"><h3>Моноподы<br/> для селфи</h3></a>
+            <a class="popular-item-link" href="catalog.html"><h3 class="popular-item-title popular-item-title-2">Моноподы<br/> для селфи</h3></a>
           </li>
           <li class="popular-item">
-            <a class="popular-title popular-title-3" href="#.html"><h3>Экшн-камеры</h3></a>
+            <a class="popular-item-link" href="#.html"><h3 class="popular-item-title popular-item-title-3">Экшн-камеры</h3></a>
           </li>
           <li class="popular-item">
-            <a class="popular-title popular-title-4" href="#.html"><h3>Фитнес-браслеты</h3></a>
+            <a class="popular-item-link" href="#.html"><h3 class="popular-item-title popular-item-title-4">Фитнес-браслеты</h3></a>
           </li>
           <li class="popular-item">
-            <a class="popular-title popular-title-5" href="#.html" autofocus><h3>Умные часы</h3></a>
+            <a class="popular-item-link" href="#.html"><h3 class="popular-item-title popular-item-title-5">Умные часы</h3></a>
           </li>
           <li class="popular-item">
-            <a class="popular-title popular-title-6" href="#.html"><h3>Квадрокоптеры</h3></a>
+            <a class="popular-item-link" href="#.html"><h3 class="popular-item-title popular-item-title-6">Квадрокоптеры</h3></a>
           </li>
         </ul> 
       </section>
