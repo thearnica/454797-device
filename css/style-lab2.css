@@ -70,9 +70,7 @@ a{
     transition-property: box-shadow;
     transition-duration: 300ms;
 }
-.btn:hover::before{
-    box-shadow: 0 0 0px 20px #f0c52e;
-}
+.btn:hover::before,
 .btn:focus::before{
     box-shadow: 0 0 0px 20px #f0c52e;
 }
@@ -323,14 +321,14 @@ a{
     width: 1160px;
     margin: 0 auto;
     margin-top: -126px;
-    margin-bottom: 100px;
+    margin-bottom: 104px;
 }
 .slider-box{
     position: relative;
 }
 .slider-controls{
     position: absolute;
-    bottom:150px;
+    bottom:146px;
     right: 83px;
 }
 .slider-controls label{
@@ -407,14 +405,14 @@ a{
 .slider-description{
     min-height: 70px;
     margin-top: 20px;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
     line-height: 30px;
     letter-spacing: 0.01em;
     color: #464646;
 }
 .btn.btn-slider{
     width: 220px;
-    margin-bottom: 47px;
+    margin-bottom: 53px;
 }
 .btn.btn-slider::before{
     width: 220px;
@@ -427,7 +425,7 @@ a{
     height: 35px;
 }
 .slider-specification tr:last-child{
-    height: 45px;
+    height: 40px;
 }
 .slider-specification td:first-child{
     width: 160px;
@@ -543,10 +541,10 @@ a{
     min-height: 318px;
 }
 .services-slider-controls{
-    flex: 280;
+    flex: 277;
     padding-top: 80px;
     padding-bottom: 65px;
-    border-right: 4px solid #000000;
+    border-right: 7px solid #000000;
 }
 .btn.btn-service{
     z-index: 1;
@@ -600,7 +598,7 @@ a{
     display: block;
 }
 .services-slider-list{
-    flex: 880;
+    flex: 883;
 }
 .services-slider-item{
     display: none;
@@ -633,10 +631,12 @@ a{
     margin: 0;
     line-height: 30px;
     letter-spacing: 0.02em;
+    color: #464646;
 }
 .brandname {
     width: 1160px;
     margin: 0 auto;
+    margin-bottom: 97px;
 }
 .brand-list {
     display: flex;
@@ -661,10 +661,6 @@ a{
     width: 1160px;
     margin: 0 auto;
 }
-.about,
-.contacts {
-    flex-basis: 560px;
-}
 .btn.btn-about,
 .btn.btn-feedback{
     width: 260px;
@@ -673,10 +669,60 @@ a{
 .btn.btn-feedback::before{
     width: 260px;
 }
+.about {
+    flex-basis: 480px;
+}
+.contacts {
+    flex-basis: 560px;
+}
+.about,
+.contacts {
+    position: relative;
+}
+.about::before,
+.contacts::before {
+    content: "";
+    position: absolute;
+    top:-7px;
+    left: 0;
+    width: 80px;
+    border-top: 7px solid black;
+}
+.about h2,
+.contacts h2 {
+    margin-left: -2px;
+    margin-bottom: 39px;
+    font-size: 47px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.01em;
+}
+.about p,
+.contacts p {
+    line-height: 30px;
+    margin-left: -2px;
+    letter-spacing: 0.01em;
+    color: #464646;
+}
+
+.about p {
+    margin-bottom:30px;
+}
+.contacts p {
+    margin-bottom:36px;
+}
+.transport-company-list{
+    margin-top: 65px;
+    margin-bottom: 55px;
+    padding-left: 35px;
+    line-height: 40px;
+    font-size: 16px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+}
 .map{
     width: 560px;
-    height: 400px;
-    background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C400&z=15"); 
+    height: 220px;
+    margin-bottom: 74px;
+    background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C220&z=15"); 
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
