@@ -640,14 +640,14 @@ a{
     flex-direction: row;
     justify-content: space-between;
 }
-.brand-item {
+.brand-item a{
     filter: grayscale(100%);
     opacity: 0.2;
     transition-property: filter, opacity;
     transition-duration: 300ms;
 }
-.brand-item:hover,
-.brand-item:focus {
+.brand-item a:hover,
+.brand-item a:focus{
     filter: grayscale(0%);
     opacity: 1;
 }
@@ -762,6 +762,9 @@ footer a{
 }
 .logo-footer{
     flex: 800;
+    display: block;
+    width: 165px;
+    height: 40px;
 } 
 .footer-profile-navigation-list{
     flex: 120;
@@ -791,15 +794,15 @@ footer a{
 .footer-profile-navigation-item.login-link,
 .footer-profile-navigation-item.logout-link{
     background-position: 35px 7px;
-    background-image: url("../img/user.svg");
+    background-image: url("../img/user2.svg");
 }
 .footer-user-navigation-item.compare-link{
     background-position: 28px 9px;
-    background-image: url("../img/compare.svg");
+    background-image: url("../img/compare2.svg");
 }
 .footer-user-navigation-item.cart-link{
     background-position: 26px 7px;
-    background-image: url("../img/cart.svg");
+    background-image: url("../img/cart2.svg");
 }
 .middle-footer{
     margin-bottom: 63px;
