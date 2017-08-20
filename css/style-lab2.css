@@ -48,6 +48,40 @@ a{
 .visually-hidden{
     display: none;
 }
+.btn {
+    position: relative;
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 0;
+    z-index: -1;
+    display: block;
+    box-shadow: 0 0 0 4px #f0c52e;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+}
+.btn:hover::before{
+    box-shadow: 0 0 0px 20px #f0c52e;
+}
+.btn:focus::before{
+    box-shadow: 0 0 0px 20px #f0c52e;
+}
+.btn:active::before{
+    box-shadow: 0 0 0px 20px #f0c52e; 
+}
+.btn:active{
+    color: rgba(0, 0, 0, 0.3);
+}
 .navigation{
     position: relative;
     width: 1040px;
@@ -378,42 +412,12 @@ a{
     letter-spacing: 0.01em;
     color: #464646;
 }
-.btn-slider{
-    position: relative;
-    display: inline-block;
+.btn.btn-slider{
     width: 220px;
     margin-bottom: 47px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.2em;
-    overflow: hidden;
 }
-.btn-slider::before{
-    content: "";
-    position: absolute;
-    top:50%;
-    left: 0;
-    z-index: -1;
-    display: block;
+.btn.btn-slider::before{
     width: 220px;
-    box-shadow: 0 0 0 4px #f0c52e;
-    transition-property: box-shadow;
-    transition-duration: 300ms;
-}
-.btn-slider:hover::before{
-    box-shadow: 0 0 0px 20px #f0c52e;
-}
-.btn-slider:focus::before{
-    box-shadow: 0 0 0px 20px #f0c52e;
-}
-.btn-slider:active::before{
-    box-shadow: 0 0 0px 20px #f0c52e; 
-}
-.btn-slider:active{
-    color: rgba(0, 0, 0, 0.3)
 }  
 .slider-specification{
     border-collapse: collapse;
@@ -544,37 +548,18 @@ a{
     padding-bottom: 65px;
     border-right: 4px solid #000000;
 }
-.services-slider-controls label{
-    position: relative;
+.btn.btn-service{
     z-index: 1;
-    display: block;
     width: 160px;
-    height: 40px;
-    margin-bottom:24px;
-    font-size: 18px;
-    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 40px;
-    letter-spacing: 0.2em;
-    overflow: hidden;    
+    margin-bottom:24px;   
 }
-.services-slider-controls label:last-child{
+.btn.btn-service:last-child{
     margin-bottom:0;
 }
-.services-slider-controls label::before{
-    content: "";
-    position: absolute;
-    top:50%;
-    left: 0;
-    z-index: -1;
-    display: block;
-    width: 220px;
-    box-shadow: 0 0 0 4px #f0c52e;
-    transition-property: box-shadow;
-    transition-duration: 300ms;
+.btn.btn-service::before{
+    width: 160px;
 }
-.services-slider-controls label::after{
+.btn.btn-service::after{
     content: "";
     position: absolute;
     top: 0;
@@ -585,29 +570,24 @@ a{
     height: 40px;
     background-color: #000000;
 } 
-#service-slide-1:hover ~ .services-slider-controls label[for="service-slide-1"]::before,
-#service-slide-2:hover ~ .services-slider-controls label[for="service-slide-2"]::before,
-#service-slide-3:hover ~ .services-slider-controls label[for="service-slide-3"]::before,
-#service-slide-1:focus ~ .services-slider-controls label[for="service-slide-1"]::before,
-#service-slide-2:focus ~ .services-slider-controls label[for="service-slide-2"]::before,
-#service-slide-3:focus ~ .services-slider-controls label[for="service-slide-3"]::before{
-    width: 220px;
-    box-shadow: 0 0 0px 20px #f0c52e;
+.btn.btn-service:active{
+    color: rgba(0, 0, 0, 1);    
 }
-#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"],
-#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"],
-#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"]{
+
+#service-slide-1:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-1"],
+#service-slide-2:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-2"],
+#service-slide-3:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-3"]{
     color: #f7e184;
     overflow: visible; 
 }
-#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"]::before,
-#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"]::before,
-#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"]::before{
+#service-slide-1:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-1"]::before,
+#service-slide-2:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-2"]::before,
+#service-slide-3:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-3"]::before{
     display: none;
 }
-#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"]::after,
-#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"]::after,
-#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"]::after{
+#service-slide-1:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-1"]::after,
+#service-slide-2:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-2"]::after,
+#service-slide-3:checked ~ .services-slider-controls .btn.btn-service[for="service-slide-3"]::after{
     display: block;
 }
 #service-slide-1:checked ~ .services-slider-list .services-slider-item-delivery{
@@ -674,3 +654,32 @@ a{
     filter: grayscale(0%);
     opacity: 1;
 }
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1160px;
+    margin: 0 auto;
+}
+.about,
+.contacts {
+    flex-basis: 560px;
+}
+.btn.btn-about,
+.btn.btn-feedback{
+    width: 260px;
+}
+.btn.btn-about::before,
+.btn.btn-feedback::before{
+    width: 260px;
+}
+.map{
+    width: 560px;
+    height: 400px;
+    background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C400&z=15"); 
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.map iframe {
+    border: none;
+}    
