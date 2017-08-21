@@ -902,4 +902,41 @@ footer{
 .social-btn:active{
     opacity: 0.1;
 }
+.modal{
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    height: 560px;
+}
+.modal.modal-map{
+    box-shadow: 0 10px 20px 0 rgba(4,6,6,0.2);
+    background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=960%2C560&z=15"); 
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.modal-map iframe {
+    border: none;
+}
+.modal-close{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    border: none;
+    background-image: url("../img/modal-close.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 0.5;
+}
+.modal-close:hover,
+.modal-close:focus{
+    opacity: 1;
+}
+.modal-close:active{
+    opacity: 0.3;
+}
 
