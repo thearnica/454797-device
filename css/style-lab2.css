@@ -9,7 +9,7 @@ body{
     text-align: left;
     color: rgba(0,0,0,1);
 }
-/*
+
 .debug form,
 .debug ul,
 .debug li,
@@ -22,7 +22,7 @@ body{
 .debug input,
 .debug div{
     box-shadow: 0 0 1px black;
-}*/
+}
 .debug .grid_div{
     position: absolute;
     top:0;
@@ -510,7 +510,9 @@ a{
 .popular-item-link:active .popular-item-title::before{
     background-color: #f0c52e;
 }
-.popular-item-link:active .popular-item-title,
+.popular-item-link:active .popular-item-title{
+    color: rgba(0,0,0,0.3);
+}
 .popular-item-link:active .popular-item-title::after{
     opacity: 0.3;
 }
@@ -728,12 +730,8 @@ a{
     border: none;
 }
 footer{
-    color: #ffffff;
     background-color: #464646;
 } 
-footer a{
-    color: #ffffff;
-}
 .wrapper-footer{
     position: relative;
     width: 1160px;
@@ -761,64 +759,70 @@ footer a{
     margin-bottom: 30px;
 }
 .logo-footer{
-    flex: 800;
     display: block;
     width: 165px;
     height: 40px;
-} 
-.footer-profile-navigation-list{
-    flex: 120;
-    display: none;
-    line-height: 26px;
-}
-.footer-profile-navigation-list-current{
-    display:flex;
 }
 .footer-user-navigation-list{
-    flex: 240;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     line-height: 26px;
 }
-.footer-profile-navigation-item{
-    padding-left:62px;
+.footer-user-navigation-list-current{
+    display:flex;
 }
 .footer-user-navigation-item{
-    padding-left:48px;
+    padding-left:63px;
 }
-.footer-profile-navigation-item,
-.footer-user-navigation-item{
+.footer-user-navigation-item a{
+    position: relative;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.01em;
+}
+.footer-user-navigation-item a::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    display: block;
+    width: 15px;
+    height: 15px;
     background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
-.footer-profile-navigation-item.login-link,
-.footer-profile-navigation-item.logout-link{
-    background-position: 35px 7px;
+.footer-user-navigation-item.login-link a::after,
+.footer-user-navigation-item.logout-lin a::after{
+    left: -27px;
     background-image: url("../img/user2.svg");
 }
-.footer-user-navigation-item.compare-link{
-    background-position: 28px 9px;
+.footer-user-navigation-item.compare-link a::after{
+    left: -22px;
     background-image: url("../img/compare2.svg");
 }
-.footer-user-navigation-item.cart-link{
-    background-position: 26px 7px;
+.footer-user-navigation-item.cart-link a::after{
+    left: -23px;
     background-image: url("../img/cart2.svg");
 }
+
 .middle-footer{
+    color: rgba(255,255,255,1);
     margin-bottom: 63px;
 }
+.middle-footer a{
+    color: rgba(255,255,255,1);
+} 
 .middle-footer p{
-    flex:360;
+    min-width: 250px;
     margin: 0;
 }
 .middle-footer p:last-child{
     text-align: right;
 }
 .footer-site-navigation-list{
-    flex: 400;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-width: 428px;
     padding-top: 3px;
     font-size: 18px;
     font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -826,21 +830,13 @@ footer a{
     text-align: center;
     letter-spacing: 0.2em;
 }
-.footer-site-navigation-item:first-child {
-    margin-left:-4px;
-    margin-right: 2px;
-}
-.footer-site-navigation-item:last-child {
-    margin-right: -8px;
-}
 .bottom-footer {
-    justify-content: flex-end;
+    width: 650px;
+    padding-left: 510px;
 } 
 .social-list{
-    flex: 650px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
 }
 .social-item{
     margin-right:22px;
@@ -869,7 +865,6 @@ footer a{
 }
 .academy{
     display: block;
-    flex:510;
     width: 28px;
     height: 34px;
     font-size: 0;
@@ -877,3 +872,34 @@ footer a{
     background-repeat: no-repeat;
     background-image: url("../img/logo-html.svg");
 }
+.logo-footer:hover,
+.logo-footer:focus,
+.footer-user-navigation-item a:hover::after,
+.footer-user-navigation-item a:focus::after,
+.footer-site-navigation-item a:hover,
+.footer-site-navigation-item a:focus,
+.academy:hover,
+.academy:focus{
+    opacity: 0.6;
+}
+.logo-footer:active,
+.footer-user-navigation-item a:active::after,
+.footer-site-navigation-item a:active,
+.academy:active{
+    opacity: 0.3;
+}
+.footer-user-navigation-item:hover a,
+.footer-user-navigation-item a:focus{
+    color: rgba(255,255,255,1);
+}
+.footer-user-navigation-item a:active{
+    color: rgba(255,255,255,0.3);
+}
+.social-btn:hover,
+.social-btn:focus{
+    opacity: 0.6;
+}
+.social-btn:active{
+    opacity: 0.1;
+}
+
