@@ -20,7 +20,8 @@ body{
 .debug p,
 .debug span,
 .debug input,
-.debug div{
+.debug div,
+.debug section{
     box-shadow: 0 0 1px black;
 }
 .debug .grid_div{
@@ -907,6 +908,77 @@ footer{
     margin: 0 auto;
     width: 960px;
     height: 560px;
+}
+.modal.modal-feedback{
+    width: 760px;
+    height: 380px;
+    padding: 90px 100px;
+    box-shadow: 
+    60px 0 40px -60px rgba(4,6,6,0.75),
+    -60px 0 40px -60px rgba(4,6,6,0.75),
+    0 10px 20px 0 rgba(4,6,6,0.2);
+    margin-bottom: 40px;
+}
+.feedback-form label{
+    font-size: 18px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 18px;
+}
+.feedback-name,
+.feedback-mail{
+    width: 320px;
+    height: 20px;
+    margin: 5px 0;
+    padding: 15px 20px;
+    border: none;
+    font-size: 14px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: rgba(237,181,181,0.5);
+    background-color: rgba(229,229,229,0.5);
+}
+.feedback-message{
+    width: 720px;
+    height: 130px;
+    margin: 5px 0;
+    padding: 15px 20px;
+    border: none;
+    font-size: 14px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: rgba(70,70,70,0.4);
+    background-color: rgba(229,229,229,0.5);
+}
+.feedback-name:hover,
+.feedback-mail:hover,
+.feedback-message:hover{
+    background-color: rgba(229,229,229,0.8);
+}
+.feedback-name:focus,
+.feedback-mail:focus,
+.feedback-message:focus{
+    background-color: rgba(229,229,229,0);
+    color: rgba(70,70,70,1);
+    box-shadow: inset 0 0 0 3px#f0c52e;
+}
+.feedback-name::[value=""]:invalid, 
+.feedback-mail:not(:valid){
+    background-color: rgba(237,181,181,0.5);
+}
+.feedback-form-row-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.feedback-form-row-1 label{
+    flex-basis: 360px;
+}
+.btn.btn-send{
+    width: 200px;
+    padding: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.btn.btn-send::before{
+    width: 200px;
 }
 .modal.modal-map{
     box-shadow: 0 10px 20px 0 rgba(4,6,6,0.2);

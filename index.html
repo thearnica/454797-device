@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/stylefonts.css">
     <script src="js/grid.js"></script>
   </head>
-  <body class="debug">
+  <body class="debufg">
 
     <header>
       <nav class="navigation">
@@ -292,17 +292,19 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          Ваше имя:
-          <input class="feedback-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" required/>
-          Ваш e-mail:
-          <input class="feedback-mail" type="email" name="mail" placeholder="Для отправки ответа" required/>
+        <p class="feedback-form-row-1">
+          <label for="name">Ваше имя:<br/>
+            <input class="feedback-name" id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста" required/>
+          </label>
+          <label for="mail">Ваш e-mail:<br/>
+            <input class="feedback-mail" id="mail" type="email" name="mail" placeholder="Для отправки ответа" required/>
+          </label>
         </p>
-        <p>
-          Текст письма:
-          <textarea class="feedback-message" name="message" placeholder="В свободной форме"></textarea>
+        <p class="feedback-form-row-2">
+          <label for="message">Текст письма:</label><br>
+          <textarea class="feedback-message" id="message" name="message" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="btn" type="submit">Отправить</button>
+        <button class="btn btn-send" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
