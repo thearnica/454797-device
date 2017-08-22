@@ -524,10 +524,9 @@ a{
     padding-bottom:70px;
     margin-bottom: 93px;
 }
-.services::after{
+.services::before{
     content: "";
     position: absolute;
-    z-index: -1;
     top:100px;
     left: 0;
     right: 0;
@@ -535,6 +534,8 @@ a{
     background-color: #e5e5e5;
 }
 .services-slider-box{
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     width: 1160px;
@@ -1020,7 +1021,7 @@ footer{
     padding: 0 60px;
     background-color: #f7e296;
 }
- .catalog-title{
+.catalog-title{
      width: 1040px;
      margin: 0 auto;
      margin-top: 33px;
@@ -1028,8 +1029,8 @@ footer{
      font-size: 47px;
      font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
      letter-spacing: 0.01em;
- }
- .breadcrumb-list{
+}
+.breadcrumb-list{
      display: flex;
      flex-direction: row;
      justify-content: flex-start;
@@ -1038,47 +1039,59 @@ footer{
      margin-top: 13px;
      margin-bottom: 40px;
      padding: 0 60px;
- }
- .breadcrumb-item {
+}
+.breadcrumb-item {
     font-size: 14px;
     letter-spacing: 0.01em;
     line-height: 36px;
     color: rgba(0,0,0,0.3);
- }
- .breadcrumb-item a{
+}
+.breadcrumb-item a{
     font-size: 14px;
     letter-spacing: 0.01em;
     line-height: 36px;
     color: rgba(0,0,0,0.3);
- }
-.catalog-wrapper{
+}
+.bg{
+    position: relative;
+}
+.bg::before{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+    background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
+    background-repeat: no-repeat;
+}
+.bg::after{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
+    background-repeat: no-repeat;
+}
+.container{
+     position: relative;
+     z-index: 1;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
      width: 1160px;
      margin: 0 auto;
- }
+}
 .filters{
      width: 330px;
- }
-.container-bg-1{
-    background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
-}
-.container-bg-2{
-    background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
-    background-position: 50vw 0;
-    background-repeat: no-repeat
-}
-.filters-bg{
      background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
- }
-.catalog-bg{
-    background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
 }
-
 .catalog{
     width: 760px;
     padding-left: 70px;
+    background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
 }
 .filters-title{
     margin: 0;
@@ -1099,8 +1112,8 @@ footer{
 .filters-form fieldset{
     position: relative;
     padding: 0;
+    padding-top: 53px;
     margin: 0;
-    padding-top: 60px;
     border-bottom:none;
     border-right: none;
     border-left:none;
@@ -1108,20 +1121,85 @@ footer{
 }
 .filters-form legend{
     position: absolute;
-    top: 10px;
+    top: 12px;
     padding: 0;
     font-size: 18px;
     font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
     letter-spacing: 0.01em;
 }
+.filter-checkbox{
+    position: relative;
+    padding-left: 38px;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    line-height: 40px;
+    vertical-align: top;
+}
+.filter-checkbox::before{
+    content: "";
+    position: absolute;
+    top:-3px;
+    left: -3px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    border-radius: 3px;
+}
+.filter-checkbox::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    display: none;
+    width: 17px;
+    height: 8px;
+    border-left: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 1px -1px #ffffff,
+    inset 0 -3px 1px -1px #ffffff;
+}
+#color-black:checked ~ .filter-checkbox[for="color-black"]::after,
+#color-white:checked ~ .filter-checkbox[for="color-white"]::after,
+#color-blue:checked ~ .filter-checkbox[for="color-blue"]::after,
+#color-red:checked ~ .filter-checkbox[for="color-red"]::after,
+#color-pink:checked ~ .filter-checkbox[for="color-pink"]::after{
+    display: block;
+}
+.filter-radio{
+    position: relative;
+    padding-left: 40px;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    line-height: 38px;
+    vertical-align: top;
+}
+.filter-radio::after{
+    content: "";
+    position: absolute;
+    top:-3px;
+    left: -3px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #000000;
+    border: 4px solid #000000;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 10px #ffffff;
+}
+#bluetooth-has:checked ~ .filter-radio[for="bluetooth-has"]::after,
+#bluetooth-has-not:checked ~ .filter-radio[for="bluetooth-has-not"]::after{
+    box-shadow: inset 0 0 0 4px #ffffff;
+}
 .filter-price{
-    height:77px;
+    height:85px;
 }
 .filter-color{
-    height:224px;
+    height:230px;
 }
 .filter-bluetooth{
-    height:100px;
+    height:111px;
 }
 .btn.btn-filter{
     width: 200px;

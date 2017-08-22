@@ -63,10 +63,9 @@
             <li class="breadcrumb-item"><a href="#">Каталог товаров</a></li>
             <li class="breadcrumb-item breadcrumb-item-current"> Моноподы для селфи</li>         
         </ul>
-        <div class="container-bg-1">
-        <div class="container-bg-2">    
-        <div class="catalog-wrapper">
-        <section class="filters filters-bg">
+        <div class="bg">
+        <div class="container">
+        <section class="filters">
             <h2 class="filters-title">Фильтр:</h2>
             <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter-price">
@@ -81,23 +80,23 @@
                     <ul class="color-list">
                         <li class="color-list-item filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" id="color-black" type="checkbox" name="black" checked/>
-                            <label for="color-black">Черный</label>
+                            <label class="filter-checkbox" for="color-black">Черный</label>
                         </li>
                         <li class="color-list-item filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" id="color-white" type="checkbox" name="white"/>
-                            <label for="color-white">Белый</label>
+                            <label class="filter-checkbox"  for="color-white">Белый</label>
                         </li>
                         <li class="color-list-item filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" id="color-blue" type="checkbox" name="blue" checked/>
-                            <label for="color-blue">Синий</label>
+                            <label class="filter-checkbox"  for="color-blue">Синий</label>
                         </li>
                         <li class="color-list-item filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" id="color-red" type="checkbox" name="red" checked/>
-                            <label for="color-red">Красный</label>
+                            <label class="filter-checkbox"  for="color-red">Красный</label>
                         </li>
                         <li class="color-list-item filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" id="color-pink" type="checkbox" name="pink"/>
-                            <label for="color-pink">Розовый</label>
+                            <label class="filter-checkbox"  for="color-pink">Розовый</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -106,18 +105,18 @@
                     <ul class="bluetooth-list">
                         <li class="bluetooth-list-item filter-option">
                             <input class="visually-hidden filter-input filter-input-radio" id="bluetooth-has" type="radio" name="has-bluetooth" value="true" checked/>
-                            <label for="bluetooth-has">Есть</label>
+                            <label class="filter-radio" for="bluetooth-has">Есть</label>
                         </li>
                         <li class="bluetooth-list-item filter-option">
                             <input class="visually-hidden filter-input filter-input-radio" id="bluetooth-has-not" type="radio" name="has-bluetooth" value="false"/>
-                            <label for="bluetooth-has-not">нет</label>
+                            <label class="filter-radio" for="bluetooth-has-not">Нет</label>
                         </li>
                     </ul>
                 </fieldset>
                 <button class="btn btn-filter" type="submit">Показать</button>
             </form>  
         </section>
-        <section class="catalog catalog-bg">
+        <section class="catalog">
             <h2 class="visually-hidden">Список моноподов для селфи</h2>
             <div class="sort-field">
                 <h3>Сортировка:</h3>
@@ -181,7 +180,6 @@
                 <li class="pagination-item pagination-item-next"><a href="#">Вперед</a></li>
             </ul>
         </section>
-        </div>
         </div>
         </div>
     </main>
