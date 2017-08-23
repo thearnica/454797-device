@@ -423,6 +423,28 @@ a {
     font-size: 18px;
     letter-spacing: 0.18px;
 }
+.filter-price {
+    
+}
+.range-controls{
+    position: relative;
+    width: 200px;
+    height: 40px;
+}
+.toggle input {
+    font-size: 14px;
+    font-family: "GilroyLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 22.27px;
+    color: rgba(0,0,0,0.2);
+    border: none;
+    background-color: rgba(255,255,255,0);   
+}
+.toggle span {
+    font-size: 14px;
+    font-family: "GilroyLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 22.27px;
+    color: rgba(0,0,0,0.2);  
+}
 .color-list {
     list-style: none;
 }

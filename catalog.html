@@ -59,10 +59,19 @@
             <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter-price">
                     <legend>Стоимость</legend>
-                    <label for="min-price">Минимальная стоимость товара</label>
-                    <input class="price" id="min-price" type="range" min="1" max="10000"/>
-                    <label for="max-price">Максимальная стоимость товара</label>
-                    <input class="price" id="max-price" type="range" min="1" max="10000"/>
+                    <div class="range-controls">
+                            <div class="scale"><div class="bar"></div></div>
+                            <div class="toggle min-toggle">
+                                <label for="min-price"></label>
+                                <span>от</span>  
+                                <input id="min-price" class="max-price" type="text" value="0">
+                            </div>
+                            <div class="toggle max-toggle">
+                                <label for="max-price"></label>
+                                <span>до</span>
+                                <input id="max-price" class="max-price" type="text" value="5 000">
+                             </div>
+                        </div>
                 </fieldset>
                 <fieldset class="filter-color">
                     <legend>Цвет</legend>
