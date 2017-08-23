@@ -175,7 +175,7 @@ a {
     line-height: 179.2px;
     letter-spacing: 1.79px;
     color: rgba(255,255,255,1);
-    background-color: rgba(247,226,150,1);
+    background-color: rgba(247,226,150,1); /* Временный фон */
 }
 .slider-title-caption {
     font-size: 47px;
@@ -268,7 +268,7 @@ a {
 .contacts .map {
     display: block;
     width: 560px;
-    height: 300px;
+    height: 300px; /* Временный размер блока */
     background-color: rgba(229,229,229,1);
     background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C220&z=15");
     background-position: 50% 50%;
