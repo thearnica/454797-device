@@ -142,15 +142,15 @@ a {
     letter-spacing: 3.6px;
     text-transform: uppercase;
 }
-.catalog-menu-list {
-    list-style: none;
-}
-.catalog-menu-list a:hover,
-.catalog-menu-list a:focus {
+.site-navigation-item a:hover,
+.site-navigation a:focus {
     color: rgba(0,0,0,0.6)
 }
-.catalog-menu-list a:active {
+.site-navigation-item a:active {
     color: rgba(0,0,0,0.3)
+}
+.catalog-menu-list {
+    list-style: none;
 }
 .catalog-menu-item a {
     font-size: 15px;
@@ -159,6 +159,14 @@ a {
     letter-spacing: 0.15px;
     text-transform: none;
 } 
+.catalog-menu-item a:hover,
+.catalog-menu-item a:focus {
+    color: rgba(0,0,0,0.6)
+}
+.catalog-menu-item a:active,
+.catalog-menu-item.catalog-menu-item-current a {
+    color: rgba(0,0,0,0.3)
+}
 .slider-list {
     list-style: none;
 }
@@ -372,8 +380,192 @@ a {
 .btn.btn-send {
     width: 200px;
     border: none;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
 }
 .btn.btn-send::before {
     width: 200px;
+}
+/****************************************Страница раздела каталога****************************************/
+.content h1 {
+    font-size: 47px;
+    letter-spacing: 0.47px;
+}
+.breadcrumb-list {
+    list-style: none;
+}
+.breadcrumb-item {
+    font-size: 14px;
+    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 36px;
+    letter-spacing: 0.14px;
+    color: rgba(0,0,0,0.3);
+}
+.breadcrumb-item a {
+    font: inherit;
+    color: rgba(0,0,0,0.3);
+}
+.breadcrumb-item a:hover,
+.breadcrumb-item a:focus {
+    color: rgba(0,0,0,0.6);
+}
+.breadcrumb-item a:active {
+    color: rgba(0,0,0,0.1);
+}
+.filters {
+    background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
+}
+.filters h2 {
+    font-size: 16px;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+}
+.filters-form legend {
+    font-size: 18px;
+    letter-spacing: 0.18px;
+}
+.color-list {
+    list-style: none;
+}
+.color-list-item label {
+    font-size: 14px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 40px;
+    letter-spacing: 0.14px;
+}
+.bluetooth-list {
+    list-style: none;
+}
+.bluetooth-list-item label {
+    font-size: 14px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 40px;
+    letter-spacing: 0.14px;
+}
+.btn.btn-filter {
+    width: 200px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.btn.btn-filter::before {
+    width: 200px;
+}
+.catalog {
+    background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
+}
+.sort-field h3 {
+    font-size: 16px;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+}
+.sort-by-list {
+    list-style: none;
+}
+.sort-by-item a {
+    font-size: 14px;
+    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 18px;
+    color: rgba(0,0,0,0.3);
+}
+.sort-by-item a:hover,
+.sort-by-item a:focus {
+    color: rgba(0,0,0,0.6);
+}
+.sort-by-item a:active,
+.sort-by-item.sort-by-item-current a {
+    color: rgba(0,0,0,1);
+}
+.sort-order-list {
+    list-style: none;
+}
+.sort-order-item a {
+    font-size: 14px;
+    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 18px;
+    color: rgba(0,0,0,0.3);
+}
+.sort-order-item-current a{
+    color: rgba(0,0,0,1);
+}
+.sort-order-item a:hover,
+.sort-order-item a:focus {
+    color: rgba(0,0,0,0.6);
+}
+.sort-order-item a:active,
+.sort-order-item.sort-order-item-current a {
+    color: rgba(0,0,0,1);
+}
+.catalog-list {
+    list-style: none;
+}
+.catalog-item-title {
+    letter-spacing: 0.18px;
+}
+.catalog-item-price {
+    font-size: 16px;
+    font-family: "GilroyLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.16px;
+    color: rgba(70,70,70,1);
+}
+.catalog-item-flag-new {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.2);
+}
+.btn.btn-in-cart {
+    width: 200px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.btn.btn-in-cart::before {
+    width: 200px;
+}
+.btn-in-compare {
+    font-size: 13px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 36px;
+    letter-spacing: 0.13px;
+    color: rgba(0,0,0,0.5);
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.btn-in-compare:hover,
+.btn-in-compare:focus {
+    color: rgba(0,0,0,1);
+}
+.btn-in-compare:active {
+    color: rgba(0,0,0,0.2);
+}
+.pagination-list {
+    list-style: none;
+    background-color: rgba(235,235,235,1);
+}
+.pagination-item a {
+    font-size: 16px;
+    letter-spacing: 3.2px;
+    color: rgba(0,0,0,0.3);
+}
+.pagination-item a:hover,
+.pagination-item a:focus {
+    color: rgba(0,0,0,0.6);
+}
+.pagination-item a:active,
+.pagination-item.pagination-item-current a {
+    color: rgba(0,0,0,1);
+}
+.pagination-item-prev a,
+.pagination-item-next a {
+    color: rgba(0,0,0,1);
+}
+.pagination-item-prev:hover,
+.pagination-item-next:hover {
+    background-color: rgba(217,217,217,1);
+}
+.pagination-item-prev:active,
+.pagination-item-next:active {
+    background-color: rgba(217,217,217,1);
+}
+.pagination-item-prev:active a,
+.pagination-item-next:active a {
+    color: rgba(0,0,0,0.3);
 }
