@@ -1,23 +1,379 @@
-body{
+@font-face {
+    font-family: "GilroyExtraBold";
+    src:url("../fonts/gilroyextrabold.woff2") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "GilroyLight";
+    src:url("../fonts/gilroylight.woff2") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src:url("../fonts/opensans.woff2") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "OpenSansLight";
+    src:url("../fonts/opensanslight.woff2") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+body {
     font-style: normal;
     font-weight:normal;
+    font-size: 18px;
+    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.2;
+    color: rgba(0,0,0,1);
+}
+a {
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+}
+.btn {
+    position: relative;
+    z-index: 1;
+    display: block;
+    min-height: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3.6px;
+    overflow: hidden;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 48%;
+    z-index: -1;
+    display: block;
+    box-shadow: 0 0 0 4px #f0c52e;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+}
+.btn:hover::before,
+.btn:focus::before{
+    box-shadow: 0 0 0px 20px #f0c52e;
+}
+.btn:active::before{
+    box-shadow: 0 0 0px 20px #f0c52e; 
+}
+.btn:active{
+    color: rgba(0, 0, 0, 0.3);
+}
+.navigation {
+    background-color: rgba(247,226,150,1);
+}
+.logo-header:hover,
+.logo-header:focus {
+     opacity: 0.6;
+}
+.logo-header:active {
+    opacity: 0.6;
+}
+.search-form {
     font-size: 15px;
     font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+}
+.search-form input {
+    font: inherit;
     color: rgba(0,0,0,1);
-    letter-spacing: 0.01em;
+    background-color: rgba(247,226,150,1);
+    border: none;
 }
-.popular-title{
-    font-size: 18px;
-    line-height: 1.2;
-    font-family: "GilroyExtraBold", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;  
+.search-form label {
+    color: rgba(0,0,0,0.3);
 }
-.services-title{
+.search-form input:hover ~ label {
+    color: rgba(0,0,0,0.6);
+}
+.search-form button {
+    font: inherit;
+    color: rgba(0,0,0,1);
+    background-color: rgba(247,226,150,1);
+    border: 2px solid rgba(0,0,0,1);
+}
+.search-form button:hover,
+.search-form button:hover {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,0,1);
+}
+.search-form button:active {
+    color: rgba(255,255,255,0.3);
+    background-color: rgba(0,0,0,1);
+}
+.profile-navigation-list,
+.user-navigation-list {
+    list-style: none;
+}
+.profile-navigation-item a,
+.user-navigation-item a {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+}
+.profile-navigation-item a:hover,
+.profile-navigation-item a:focus,
+.user-navigation-item a:hover,
+.user-navigation-item a:focus {
+    color: rgba(0,0,0,0.6)
+}
+.profile-navigation-item a:active,
+.user-navigation-item a:active {
+    color: rgba(0,0,0,0.3)
+}
+.site-navigation-list {
+    list-style: none;
+}
+.site-navigation-item a {
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+.catalog-menu-list {
+    list-style: none;
+}
+.catalog-menu-list a:hover,
+.catalog-menu-list a:focus {
+    color: rgba(0,0,0,0.6)
+}
+.catalog-menu-list a:active {
+    color: rgba(0,0,0,0.3)
+}
+.catalog-menu-item a {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    text-transform: none;
+} 
+.slider-list {
+    list-style: none;
+}
+.slider-title-number {
+    font-size: 179.2px;
+    line-height: 179.2px;
+    letter-spacing: 1.79px;
+    color: rgba(255,255,255,1);
+    background-color: rgba(247,226,150,1);
+}
+.slider-title-caption {
     font-size: 47px;
-    line-height: 1.2;
-    font-family: "GilroyExtraBold","Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.47px; 
 }
-.catalog-title{
+.slider-item-description {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(70, 70, 70, 1);
+}
+.btn.btn-slider {
+    width: 220px;
+}
+.btn.btn-slider::before {
+    width: 220px;
+}
+.slider-item-specification td {
+    font-size: 36px;
+    font-family: "GilroyLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.36px;
+}   
+.slider-item-specification th {
+    font-size: 13px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 20px;
+    letter-spacing: 0.13px;
+    color: rgba(70, 70, 70, 1);
+}
+.popular-list {
+    list-style: none;
+}
+.popular-item h3 {
+    letter-spacing: 0.18px;
+}
+.services {
+    background-color: rgba(229,229,229,1);
+}
+.btn.btn-service {
+    width: 160px;
+}
+.btn.btn-service::before {
+    width: 160px;
+}
+.services-slider-list {
+    list-style: none;
+}
+.services-slider-item h3 {
     font-size: 47px;
-    line-height: 1.2;
-    font-family: "GilroyExtraBold","Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.47px; 
+}
+.services-slider-item p {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(70, 70, 70, 1);
+}
+.brand-list {
+    list-style: none;
+}
+.about h2 {
+    font-size: 47px;
+    letter-spacing: 0.47px;
+}
+.about p {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 30px;
+    color: rgba(70, 70, 70, 1);
+}
+.transport-company-list {
+    list-style: none;
+}
+.transport-company-list li {
+    font-size: 16px;
+    line-height: 40px;
+}
+.contacts h2 {
+    font-size: 47px;
+    letter-spacing: 0.47px;
+}
+.contacts p {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 30px;
+    color: rgba(70, 70, 70, 1);
+}
+.contacts .map {
+    display: block;
+    width: 560px;
+    height: 300px;
+    background-color: rgba(229,229,229,1);
+    background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C220&z=15");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.contacts iframe {
+    border: none;
+}
+.btn.btn-info {
+    width: 260px;
+}
+.btn.btn-info::before {
+    width: 260px;
+}
+.footer-navigation {
+    background-color: rgba(70,70,70,1);
+}
+.footer-navigation a {
+    color: rgba(255, 255, 255, 1);
+}
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer-navigation a:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+.logo-footer:hover,
+.logo-footer:focus {
+     opacity: 0.6;
+}
+.logo-footer:active {
+    opacity: 0.6;
+}
+.footer-user-navigation-list {
+    list-style: none;
+}
+.footer-user-navigation-item a {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.footer-user-navigation-item a:hover,
+.footer-user-navigation-item a:focus {
+    color: rgba(255, 255, 255, 1);
+}
+.footer-user-navigation-item a:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+.footer-navigation p {
+    font-size: 15px;
+    font-family: "OpenSansLight", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 1);
+}
+.footer-site-navigation-list {
+    list-style: none;
+}
+.footer-site-navigation-item a {
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+.social-list {
+    list-style: none;
+}
+.feedback-form label {
+    line-height: 18px;
+}
+.feedback-form input,
+.feedback-form textarea {
+    font-size: 14px;
+    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    line-height: 18px;
+    color: rgba(70,70,70,1);
+    background-color: rgba(229,229,229,0.5);
+}
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+    background-color: rgba(229,229,229,0.8);
+}
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    background-color: rgba(229,229,229,0);
+    box-shadow: inset 0 0 0 3px#f0c52e;
+}
+/*
+.feedback-form input:invalid,
+.feedback-form textarea:invalid {
+    background-color: rgba(237,181,181,0.5);
+}*/
+.feedback-form input::-webkit-input-placeholder,
+.feedback-form textarea::-webkit-input-placeholder {
+    color: rgba(70,70,70,0.4);
+}
+.feedback-form input::-moz-placeholder,
+.feedback-form textarea::-moz-placeholder {
+    color: rgba(70,70,70,0.4);
+}
+.feedback-form input:-moz-placeholder,
+.feedback-form textarea:-moz-placeholder {
+    color: rgba(70,70,70,0.4);
+}
+.feedback-form input:-ms-input-placeholder,
+.feedback-form textarea:-ms-input-placeholder {
+    color: rgba(70,70,70,0.4);
+}
+.btn.btn-send {
+    width: 200px;
+    border: none;
+    background-color: rgba(255, 255, 255, 1);
+}
+.btn.btn-send::before {
+    width: 200px;
 }
