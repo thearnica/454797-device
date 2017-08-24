@@ -1,590 +1,756 @@
 @font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/gilroyextrabold.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 800;
+  font-family: "Gilroy";
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
 }
+
 @font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/gilroylight.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 300;
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
 }
+
 @font-face {
-    font-family: "OpenSans";
-    src: url("../fonts/opensans.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 400;
+  font-family: "OpenSans";
+  src: url("../fonts/opensans.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
 }
+
 @font-face {
-    font-family: "OpenSans";
-    src: url("../fonts/opensanslight.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 300;
+  font-family: "OpenSans";
+  src: url("../fonts/opensanslight.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
 }
+
 body {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    font-family: "Gilroy", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 1.2;
-    color: rgba(0, 0, 0, 1);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  font-family: "Gilroy", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 1);
 }
+
 a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
 }
+
 .btn {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font: inherit;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3.6px;
-    overflow: hidden;
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3.6px;
+  overflow: hidden;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
+
 .btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 21px;
-    z-index: -1;
-    display: block;
-    box-shadow: 0 0 0 4px #f0c52e;
-    transition-property: box-shadow;
-    transition-duration: 300ms;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 21px;
+  z-index: -1;
+  display: block;
+  box-shadow: 0 0 0 4px #f0c52e;
+  transition-property: box-shadow;
+  transition-duration: 300ms;
 }
+
 .btn:hover::before,
 .btn:focus::before {
-    box-shadow: 0 0 0px 20px #f0c52e;
+  box-shadow: 0 0 0px 20px #f0c52e;
 }
+
 .btn:active::before {
-    box-shadow: 0 0 0px 20px #f0c52e; 
+  box-shadow: 0 0 0px 20px #f0c52e;
 }
+
 .btn:active {
-    color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .navigation {
-    background-color: rgba(247, 226, 150, 1);
+  background-color: rgba(247, 226, 150, 1);
 }
+
 .logo-header:hover,
 .logo-header:focus {
-     opacity: 0.6;
+  opacity: 0.6;
 }
+
 .logo-header:active {
-    opacity: 0.6;
+  opacity: 0.6;
 }
+
 .search-form {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 36px;
-    letter-spacing: 0.15px;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 36px;
+  letter-spacing: 0.15px;
 }
+
 .search-form input {
-    font: inherit;
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(247, 226, 150, 1);
-    border: none;
+  font: inherit;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(247, 226, 150, 1);
+  border: none;
 }
+
 .search-form label {
-    color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
-.search-form input:hover ~ label {
-    color: rgba(0, 0, 0, 0.6);
+
+.search-form input:hover~label {
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .search-form button {
-    font: inherit;
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(247, 226, 150, 1);
-    border: 2px solid rgba(0, 0, 0, 1);
+  font: inherit;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(247, 226, 150, 1);
+  border: 2px solid rgba(0, 0, 0, 1);
 }
+
 .search-form button:hover,
 .search-form button:hover {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
 }
+
 .search-form button:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 1);
 }
+
 .profile-navigation-list,
 .user-navigation-list {
-    list-style: none;
+  list-style: none;
 }
+
 .profile-navigation-item a,
 .user-navigation-item a {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 36px;
-    letter-spacing: 0.15px;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 36px;
+  letter-spacing: 0.15px;
 }
+
 .profile-navigation-item a:hover,
 .profile-navigation-item a:focus,
 .user-navigation-item a:hover,
 .user-navigation-item a:focus {
-    color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .profile-navigation-item a:active,
 .user-navigation-item a:active {
-    color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .site-navigation-list {
-    list-style: none;
+  list-style: none;
 }
+
 .site-navigation-item a {
-    letter-spacing: 3.6px;
-    text-transform: uppercase;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
 }
+
 .site-navigation-item a:hover,
 .site-navigation a:focus {
-    color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .site-navigation-item a:active {
-    color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .catalog-menu-list {
-    list-style: none;
+  list-style: none;
 }
+
 .catalog-menu-item a {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 36px;
-    letter-spacing: 0.15px;
-    text-transform: none;
-} 
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  text-transform: none;
+}
+
 .catalog-menu-item a:hover,
 .catalog-menu-item a:focus {
-    color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .catalog-menu-item a:active,
 .catalog-menu-item.catalog-menu-item-current a {
-    color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .slider-list {
-    list-style: none;
+  list-style: none;
 }
+
 .slider-title-number {
-    font-size: 179.2px;
-    line-height: 179.2px;
-    letter-spacing: 1.79px;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(247, 226, 150, 1); /* Временный фон */
+  font-size: 179.2px;
+  line-height: 179.2px;
+  letter-spacing: 1.79px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(247, 226, 150, 1);
+  /* Временный фон */
 }
+
 .slider-title-caption {
-    font-size: 47px;
-    letter-spacing: 0.47px; 
+  font-size: 47px;
+  letter-spacing: 0.47px;
 }
+
 .slider-item-description {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 30px;
-    letter-spacing: 0.15px;
-    color: rgba(70, 70, 70, 1);
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: rgba(70, 70, 70, 1);
 }
+
 .btn.btn-slider,
 .btn.btn-slider::before {
-    width: 220px;
+  width: 220px;
 }
+
 .slider-item-specification td {
-    font-size: 36px;
-    font-weight: 300;
-    letter-spacing: 0.36px;
-}   
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+}
+
 .slider-item-specification th {
-    font-size: 13px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 20px;
-    letter-spacing: 0.13px;
-    color: rgba(70, 70, 70, 1);
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 20px;
+  letter-spacing: 0.13px;
+  color: rgba(70, 70, 70, 1);
 }
+
 .popular-list {
-    list-style: none;
+  list-style: none;
 }
+
 .popular-item h3 {
-    font-size: 18px;
-    letter-spacing: 0.18px;
+  font-size: 18px;
+  letter-spacing: 0.18px;
 }
+
 .services {
-    background-color: rgba(229, 229, 229, 1);
+  background-color: rgba(229, 229, 229, 1);
 }
+
 .btn.btn-service,
 .btn.btn-service::before {
-    width: 160px;
+  width: 160px;
 }
+
 .services-slider-list {
-    list-style: none;
+  list-style: none;
 }
+
 .services-slider-item h3 {
-    font-size: 47px;
-    letter-spacing: 0.47px; 
+  font-size: 47px;
+  letter-spacing: 0.47px;
 }
+
 .services-slider-item p {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 30px;
-    letter-spacing: 0.15px;
-    color: rgba(70, 70, 70, 1);
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: rgba(70, 70, 70, 1);
 }
+
 .brand-list {
-    list-style: none;
+  list-style: none;
 }
+
+.brand-link {
+  display: inline-block;
+  width: 260px;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+}
+
+.brand-logo-1 {
+  background-image: url("../img/logo-grey-1.png");
+}
+
+.brand-logo-2 {
+  background-image: url("../img/logo-grey-2.png");
+}
+
+.brand-logo-3 {
+  background-image: url("../img/logo-grey-3.png");
+}
+
+.brand-logo-4 {
+  background-image: url("../img/logo-grey-4.png");
+}
+
+.brand-link img {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 300ms;
+}
+
+.brand-link:hover img,
+.brand-link:hover img {
+  opacity: 1;
+}
+
 .about h2 {
-    font-size: 47px;
-    letter-spacing: 0.47px;
+  font-size: 47px;
+  letter-spacing: 0.47px;
 }
+
 .about p {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 30px;
-    color: rgba(70, 70, 70, 1);
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 30px;
+  color: rgba(70, 70, 70, 1);
 }
+
 .transport-company-list {
-    list-style: none;
+  list-style: none;
 }
+
 .transport-company-list li {
-    font-size: 16px;
-    line-height: 40px;
+  font-size: 16px;
+  line-height: 40px;
 }
+
 .contacts h2 {
-    font-size: 47px;
-    letter-spacing: 0.47px;
+  font-size: 47px;
+  letter-spacing: 0.47px;
 }
+
 .contacts p {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 30px;
-    color: rgba(70, 70, 70, 1);
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 30px;
+  color: rgba(70, 70, 70, 1);
 }
+
 .contacts .map {
-    display: block;
-    width: 560px;
-    height: 300px; /* Временный размер блока */
-    background-color: rgba(229, 229, 229, 1);
-    background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C220&z=15");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+  display: block;
+  width: 560px;
+  height: 300px;
+  /* Временный размер блока */
+  background-color: rgba(229, 229, 229, 1);
+  background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C220&z=15");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
+
 .contacts iframe {
-    border: none;
+  border: none;
 }
+
 .btn.btn-info,
 .btn.btn-info::before {
-    width: 260px;
+  width: 260px;
 }
+
 .footer-navigation {
-    background-color: rgba(70, 70, 70, 1);
+  background-color: rgba(70, 70, 70, 1);
 }
+
 .footer-navigation a {
-    color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
+
 .footer-navigation a:hover,
 .footer-navigation a:focus {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
+
 .footer-navigation a:active {
-    color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
+
 .logo-footer:hover,
 .logo-footer:focus {
-     opacity: 0.6;
+  opacity: 0.6;
 }
+
 .logo-footer:active {
-    opacity: 0.6;
+  opacity: 0.6;
 }
+
 .footer-user-navigation-list {
-    list-style: none;
+  list-style: none;
 }
+
 .footer-user-navigation-item a {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 36px;
-    letter-spacing: 0.15px;
-    color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: rgba(255, 255, 255, 0.7);
 }
+
 .footer-user-navigation-item a:hover,
 .footer-user-navigation-item a:focus {
-    color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
+
 .footer-user-navigation-item a:active {
-    color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
+
 .footer-navigation p {
-    font-size: 15px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 30px;
-    color: rgba(255, 255, 255, 1);
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 1);
 }
+
 .footer-site-navigation-list {
-    list-style: none;
+  list-style: none;
 }
+
 .footer-site-navigation-item a {
-    letter-spacing: 3.6px;
-    text-transform: uppercase;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
 }
+
 .social-list {
-    list-style: none;
+  list-style: none;
 }
+
 .feedback-form label {
-    line-height: 18px;
+  line-height: 18px;
 }
+
 .feedback-form input,
 .feedback-form textarea {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 18px;
-    color: rgba(70, 70, 70, 1);
-    background-color: rgba(229, 229, 229, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 1);
+  background-color: rgba(229, 229, 229, 0.5);
 }
+
 .feedback-form input:hover,
 .feedback-form textarea:hover {
-    background-color: rgba(229, 229, 229, 0.8);
+  background-color: rgba(229, 229, 229, 0.8);
 }
+
 .feedback-form input:focus,
 .feedback-form textarea:focus {
-    background-color: rgba(229, 229, 229, 0);
-    box-shadow: inset 0 0 0 3px #f0c52e;
+  background-color: rgba(229, 229, 229, 0);
+  box-shadow: inset 0 0 0 3px #f0c52e;
 }
+
+
 /*
 .feedback-form input:invalid,
 .feedback-form textarea:invalid {
     background-color: rgba(237,181,181,0.5);
 }*/
+
 .feedback-form input::-webkit-input-placeholder,
 .feedback-form textarea::-webkit-input-placeholder {
-    color: rgba(70, 70, 70, 0.4);
+  color: rgba(70, 70, 70, 0.4);
 }
+
 .feedback-form input::-moz-placeholder,
 .feedback-form textarea::-moz-placeholder {
-    color: rgba(70, 70, 70, 0.4);
+  color: rgba(70, 70, 70, 0.4);
 }
+
 .feedback-form input:-moz-placeholder,
 .feedback-form textarea:-moz-placeholder {
-    color: rgba(70, 70, 70, 0.4);
+  color: rgba(70, 70, 70, 0.4);
 }
+
 .feedback-form input:-ms-input-placeholder,
 .feedback-form textarea:-ms-input-placeholder {
-    color: rgba(70, 70, 70, 0.4);
+  color: rgba(70, 70, 70, 0.4);
 }
+
 .btn.btn-send,
 .btn.btn-send::before {
-    width: 200px;
+  width: 200px;
 }
+
+
 /****************************************Страница раздела каталога****************************************/
+
 .content h1 {
-    font-size: 47px;
-    letter-spacing: 0.47px;
+  font-size: 47px;
+  letter-spacing: 0.47px;
 }
+
 .breadcrumb-list {
-    list-style: none;
+  list-style: none;
 }
+
 .breadcrumb-item {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 36px;
-    letter-spacing: 0.14px;
-    color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 36px;
+  letter-spacing: 0.14px;
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .breadcrumb-item a {
-    font: inherit;
-    color: rgba(0, 0, 0, 0.3);
+  font: inherit;
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .breadcrumb-item a:hover,
 .breadcrumb-item a:focus {
-    color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .breadcrumb-item a:active {
-    color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.1);
 }
+
 .filters {
-    background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
+  background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
 }
+
 .filters h2 {
-    font-size: 16px;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
 }
+
 .filters-form legend {
-    font-size: 18px;
-    letter-spacing: 0.18px;
+  font-size: 18px;
+  letter-spacing: 0.18px;
 }
-.filter-price {
-    
+
+.filter-price {}
+
+.range-controls {
+  position: relative;
+  width: 200px;
+  height: 40px;
 }
-.range-controls{
-    position: relative;
-    width: 200px;
-    height: 40px;
-}
+
 .toggle input {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22.27px;
-    color: rgba(0, 0, 0, 0.2);
-    border: none;
-    background-color: rgba(255, 255, 255, 0);   
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22.27px;
+  color: rgba(0, 0, 0, 0.2);
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
+
 .toggle span {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22.27px;
-    color: rgba(0, 0, 0, 0.2);  
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22.27px;
+  color: rgba(0, 0, 0, 0.2);
 }
+
 .color-list {
-    list-style: none;
+  list-style: none;
 }
+
 .color-list-item label {
-    font-size: 14px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 40px;
-    letter-spacing: 0.14px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 40px;
+  letter-spacing: 0.14px;
 }
+
 .bluetooth-list {
-    list-style: none;
+  list-style: none;
 }
+
 .bluetooth-list-item label {
-    font-size: 14px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 40px;
-    letter-spacing: 0.14px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 40px;
+  letter-spacing: 0.14px;
 }
+
 .btn.btn-filter,
 .btn.btn-filter::before {
-    width: 200px;
+  width: 200px;
 }
+
 .catalog {
-    background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
+  background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
 }
+
 .sort-field h3 {
-    font-size: 16px;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
 }
+
 .sort-by-list {
-    list-style: none;
+  list-style: none;
 }
+
 .sort-by-item a {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 18px;
-    color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .sort-by-item a:hover,
 .sort-by-item a:focus {
-    color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .sort-by-item a:active,
 .sort-by-item.sort-by-item-current a {
-    color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
 }
+
 .sort-order-list {
-    list-style: none;
+  list-style: none;
 }
+
 .sort-order-item a {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 18px;
-    color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
 }
-.sort-order-item-current a{
-    color: rgba(0, 0, 0, 1);
+
+.sort-order-item-current a {
+  color: rgba(0, 0, 0, 1);
 }
+
 .sort-order-item a:hover,
 .sort-order-item a:focus {
-    color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .sort-order-item a:active,
 .sort-order-item.sort-order-item-current a {
-    color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
 }
+
 .catalog-list {
-    list-style: none;
+  list-style: none;
 }
+
 .catalog-item-title {
-    font-size: 18px;
-    letter-spacing: 0.18px;
+  font-size: 18px;
+  letter-spacing: 0.18px;
 }
+
 .catalog-item-price {
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.16px;
-    color: rgba(70, 70, 70, 1);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.16px;
+  color: rgba(70, 70, 70, 1);
 }
+
 .catalog-item-flag-new {
-    font-size: 14px;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
 }
+
 .btn.btn-in-cart,
 .btn.btn-in-cart::before {
-    width: 200px;
+  width: 200px;
 }
+
 .btn-in-compare {
-    font-size: 13px;
-    font-weight: 300;
-    font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: 36px;
-    letter-spacing: 0.13px;
-    color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 36px;
+  letter-spacing: 0.13px;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
+
 .btn-in-compare:hover,
 .btn-in-compare:focus {
-    color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
 }
+
 .btn-in-compare:active {
-    color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
 }
+
 .pagination-list {
-    list-style: none;
-    background-color: rgba(235, 235, 235, 1);
+  list-style: none;
+  background-color: rgba(235, 235, 235, 1);
 }
+
 .pagination-item a {
-    font-size: 16px;
-    letter-spacing: 3.2px;
-    color: rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .pagination-item a:hover,
 .pagination-item a:focus {
-    color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .pagination-item a:active,
 .pagination-item.pagination-item-current a {
-    color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
 }
+
 .pagination-item-prev a,
 .pagination-item-next a {
-    color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
 }
+
 .pagination-item-prev:hover,
 .pagination-item-next:hover {
-    background-color: rgba(217, 217, 217, 1);
+  background-color: rgba(217, 217, 217, 1);
 }
+
 .pagination-item-prev:active,
 .pagination-item-next:active {
-    background-color: rgba(217, 217, 217, 1);
+  background-color: rgba(217, 217, 217, 1);
 }
+
 .pagination-item-prev:active a,
 .pagination-item-next:active a {
-    color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
