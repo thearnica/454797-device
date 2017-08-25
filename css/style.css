@@ -1212,23 +1212,27 @@ a {
   flex-direction: row;
   margin: 0;
   padding: 0;
-  padding-top:25px;
+  padding-top: 25px;
   padding-bottom: 25px;
   list-style: none;
   background-color: rgba(235, 235, 235, 1);
 }
-.pagination-item{
+
+.pagination-item {
   min-width: 35px;
   text-align: center;
 }
-.pagination-item:first-child{
-  flex:1;
+
+.pagination-item:first-child {
+  flex: 1;
   text-align: left;
 }
-.pagination-item:last-child{
-  flex:1;
+
+.pagination-item:last-child {
+  flex: 1;
   text-align: right;
 }
+
 .pagination-item a {
   font-size: 16px;
   letter-spacing: 3.2px;
