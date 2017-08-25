@@ -525,6 +525,10 @@ a {
   list-style: none;
 }
 
+.services-slider-item {
+  padding-right: 300px;
+}
+
 .services-slider-item h3 {
   font-size: 47px;
   letter-spacing: 0.47px;
@@ -634,7 +638,7 @@ a {
   color: rgba(70, 70, 70, 1);
 }
 
-.contacts .map {
+.map {
   display: block;
   width: 560px;
   height: 220px;
@@ -644,7 +648,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.contacts iframe {
+.map iframe {
   border: none;
 }
 
@@ -892,6 +896,10 @@ a {
 }
 
 .breadcrumb-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -918,7 +926,43 @@ a {
   color: rgba(0, 0, 0, 0.1);
 }
 
+.bg-wrapper {
+  position: relative;
+}
+
+.bg-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
+  background-repeat: no-repeat;
+}
+
+.bg-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
+  background-repeat: no-repeat;
+}
+
+.contant-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+}
+
 .filters {
+  width: 200px;
+  padding-left: 60px;
+  padding-right: 70px;
   background-image: linear-gradient(to bottom, #dbdbdb 70px, #eeeeee 70px);
 }
 
@@ -958,6 +1002,8 @@ a {
 }
 
 .color-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -970,6 +1016,8 @@ a {
 }
 
 .bluetooth-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -987,16 +1035,30 @@ a {
 }
 
 .catalog {
+  width: 760px;
+  padding-left: 70px;
   background-image: linear-gradient(to bottom, #eeeeee 70px, #ffffff 70px);
 }
 
+.sort-field {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
 .sort-field h3 {
+  width: 200px;
   font-size: 16px;
   letter-spacing: 3.2px;
   text-transform: uppercase;
 }
 
 .sort-by-list {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -1019,6 +1081,11 @@ a {
 }
 
 .sort-order-list {
+  display: flex;
+  flex-direction: row;
+  width: 60px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -1045,10 +1112,34 @@ a {
 }
 
 .catalog-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.catalog-item {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  width: 360px;
+  min-height: 460px;
+  margin-bottom: 45px;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .catalog-item-title {
+  width: 260px;
+  margin: 0;
   font-size: 18px;
   letter-spacing: 0.18px;
 }
@@ -1060,19 +1151,43 @@ a {
   color: rgba(70, 70, 70, 1);
 }
 
+.catalog-item-photo {
+  width: 360px;
+  height: 380px;
+  margin-bottom: 35px;
+}
+
 .catalog-item-flag-new {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55px;
+  height: 55px;
   font-size: 14px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.2);
 }
 
+.catalog-item-button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  width: 360px;
+  padding-top: 170px;
+  padding-bottom: 120px;
+}
+
 .btn.btn-in-cart,
 .btn.btn-in-cart::before {
   width: 200px;
+  margin: 0 auto;
 }
 
 .btn-in-compare {
+  margin: 0 auto;
   font-size: 13px;
   font-weight: 300;
   font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1093,10 +1208,27 @@ a {
 }
 
 .pagination-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  padding-top:25px;
+  padding-bottom: 25px;
   list-style: none;
   background-color: rgba(235, 235, 235, 1);
 }
-
+.pagination-item{
+  min-width: 35px;
+  text-align: center;
+}
+.pagination-item:first-child{
+  flex:1;
+  text-align: left;
+}
+.pagination-item:last-child{
+  flex:1;
+  text-align: right;
+}
 .pagination-item a {
   font-size: 16px;
   letter-spacing: 3.2px;

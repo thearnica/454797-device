@@ -8,36 +8,38 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="debug">
   <header>
-    <nav class="navigation">
+    <nav class="navigation container">
       <a class="logo-header" href="index.html"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина Девайс"/></a>
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-        <input id="search" type="search" name="search">
-        <label for="search">Поиск по сайту</label>
-        <button type="submit">Найти</button>
-      </form>
-      <ul class="profile-navigation-list">
-        <li class="profile-navigation-item login-link">
-          <a href="#">Войти</a>
-        </li>
-      </ul>
-      <ul class="profile-navigation-list profile-navigation-list-current">
-        <li class="profile-navigation-item profile-link">
-          <a href="#">Валентин Петухов</a>
-        </li>
-        <li class="profile-navigation-item logout-link">
-          <a href="#">Выйти</a>
-        </li>
-      </ul>
-      <ul class="user-navigation-list">
-        <li class="user-navigation-item compare-link">
-          <a href="#">Сравнить</a>
-        </li>
-        <li class="user-navigation-item cart-link">
-          <a href="#">Корзина</a>
-        </li>
-      </ul>
+      <div class="user-navigation-wrapper">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <input id="search" type="search" name="search">
+          <label for="search">Поиск по сайту</label>
+          <button type="submit">Найти</button>
+        </form>
+        <ul class="profile-navigation-list">
+          <li class="profile-navigation-item login-link">
+            <a href="#">Войти</a>
+          </li>
+        </ul>
+        <ul class="profile-navigation-list profile-navigation-list-current">
+          <li class="profile-navigation-item profile-link">
+            <a href="#">Валентин Петухов</a>
+          </li>
+          <li class="profile-navigation-item logout-link">
+            <a href="#">Выйти</a>
+          </li>
+        </ul>
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item compare-link">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="user-navigation-item cart-link">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+      </div>
       <ul class="site-navigation-list">
         <li class="site-navigation-item site-navigation-item-catalog">
           <a href="#">Каталог товаров</a>
@@ -45,20 +47,20 @@
             <li class="catalog-menu-item">
               <a href="#">Виртуальная реальность</a>
             </li>
-            <li class="catalog-menu-item catalog-menu-item-current">
-              <a>Моноподы для селфи</a>
-            </li>
-            <li class="catalog-menu-item">
-              <a href="#">Экшн-камеры</a>
-            </li>
             <li class="catalog-menu-item">
               <a href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="catalog-menu-item">
+              <a href="#">Квадрокоптеры</a>
+            </li>
+            <li class="catalog-menu-item catalog-menu-item-current">
+              <a>Моноподы для селфи</a>
             </li>
             <li class="catalog-menu-item">
               <a href="#">Умные часы</a>
             </li>
             <li class="catalog-menu-item">
-              <a href="#">Квадрокоптеры</a>
+              <a href="#">Экшн-камеры</a>
             </li>
           </ul>
         </li>
@@ -75,212 +77,243 @@
     </nav>
   </header>
   <main class="content">
-    <h1 class="catalog-title">Моноподы для селфи</h1>
-    <ul class="breadcrumb-list">
-      <li class="breadcrumb-item">
-        <a href="index.html">Главная</a>
-      </li>
-      <li class="breadcrumb-item">
-        <a href="#">Каталог товаров</a>
-      </li>
-      <li class="breadcrumb-item breadcrumb-item-current">Моноподы для селфи</li>
-    </ul>
-    <section class="filters">
-      <h2>Фильтр:</h2>
-      <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="filter-price">
-          <legend>Стоимость</legend>
-          <div class="range-controls">
-            <div class="scale">
-              <div class="bar"></div>
-            </div>
-            <div class="toggle min-toggle">
-              <label for="min-price"></label>
-              <span>от</span>
-              <input id="min-price" class="max-price" type="text" value="0">
-            </div>
-            <div class="toggle max-toggle">
-              <label for="max-price"></label>
-              <span>до</span>
-              <input id="max-price" class="max-price" type="text" value="5 000">
-            </div>
+    <div class="container">
+      <h1 class="catalog-title">Моноподы для селфи</h1>
+      <ul class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#">Каталог товаров</a>
+        </li>
+        <li class="breadcrumb-item breadcrumb-item-current">Моноподы для селфи</li>
+      </ul>
+    </div>
+    <div class="bg-wrapper">
+      <div class="contant-wrapper container">
+        <section class="filters">
+          <h2>Фильтр:</h2>
+          <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="filter-price">
+              <legend>Стоимость</legend>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle min-toggle">
+                  <label for="min-price"></label>
+                  <span>от</span>
+                  <input id="min-price" class="max-price" type="text" value="0">
+                </div>
+                <div class="toggle max-toggle">
+                  <label for="max-price"></label>
+                  <span>до</span>
+                  <input id="max-price" class="max-price" type="text" value="5 000">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-color">
+              <legend>Цвет</legend>
+              <ul class="color-list">
+                <li class="color-list-item">
+                  <input class="visually-hidden checkbox-black" id="color-black" type="checkbox" name="black" checked/>
+                  <label for="color-black">Черный</label>
+                </li>
+                <li class="color-list-item">
+                  <input class="visually-hidden checkbox-white" id="color-white" type="checkbox" name="white" />
+                  <label for="color-white">Белый</label>
+                </li>
+                <li class="color-list-item">
+                  <input class="visually-hidden checkbox-blue" id="color-blue" type="checkbox" name="blue" checked/>
+                  <label for="color-blue">Синий</label>
+                </li>
+                <li class="color-list-item">
+                  <input class="visually-hidden checkbox-red" id="color-red" type="checkbox" name="red" checked/>
+                  <label for="color-red">Красный</label>
+                </li>
+                <li class="color-list-item">
+                  <input class="visually-hidden checkbox-pink" id="color-pink" type="checkbox" name="pink" />
+                  <label for="color-pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-bluetooth">
+              <legend>Bluetooth</legend>
+              <ul class="bluetooth-list">
+                <li class="bluetooth-list-item">
+                  <input class="visually-hidden radio-bluetooth-has" id="bluetooth-has" type="radio" name="has-bluetooth" value="true" checked/>
+                  <label for="bluetooth-has">Есть</label>
+                </li>
+                <li class="bluetooth-list-item">
+                  <input class="visually-hidden radio-bluetooth-has-not" id="bluetooth-has-not" type="radio" name="has-bluetooth" value="false"
+                  />
+                  <label for="bluetooth-has-not">нет</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="btn btn-filter" type="submit">Показать</button>
+          </form>
+        </section>
+        <section class="catalog">
+          <h2 class="visually-hidden">Список моноподов для селфи</h2>
+          <div class="sort-field">
+            <h3>Сортировка:</h3>
+            <ul class="sort-by-list">
+              <li class="sort-by-item sort-by-item-current">
+                <a href="#">По цене</a>
+              </li>
+              <li class="sort-by-item">
+                <a href="#">По типу</a>
+              </li>
+              <li class="sort-by-item">
+                <a href="#">По популярности</a>
+              </li>
+            </ul>
+            <ul class="sort-order-list">
+              <li class="sort-order-item sort-order-item-current">
+                <a href="#">по возрастению</a>
+              </li>
+              <li class="sort-order-item">
+                <a href="#">по уменьшению</a>
+              </li>
+            </ul>
           </div>
-        </fieldset>
-        <fieldset class="filter-color">
-          <legend>Цвет</legend>
-          <ul class="color-list">
-            <li class="color-list-item">
-              <input class="visually-hidden checkbox-black" id="color-black" type="checkbox" name="black" checked/>
-              <label for="color-black">Черный</label>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <div class="title-wrapper">
+                <a href="#">
+                  <h3 class="catalog-item-title">Любительская селфи-палка</h3>
+                </a>
+                <span class="catalog-item-price">500 руб.</span>
+              </div>
+              <img class="catalog-item-photo" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка" />
+              <div class="catalog-item-flag-new">new</div>
+              <div class="catalog-item-button">
+                <button class="btn btn-in-cart" type="button">В корзину</button>
+                <button class="btn-in-compare" type="button">Добавить к сравнению</button>
+              </div>
             </li>
-            <li class="color-list-item">
-              <input class="visually-hidden checkbox-white" id="color-white" type="checkbox" name="white" />
-              <label for="color-white">Белый</label>
+            <li class="catalog-item">
+              <div class="title-wrapper">
+                <a href="#">
+                  <h3 class="catalog-item-title">Профессиональная селфи-палка</h3>
+                </a>
+                <span class="catalog-item-price">1500 руб.</span>
+              </div>
+              <img class="catalog-item-photo" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" />
+              <div class="catalog-item-flag-new">new</div>
+              <div class="catalog-item-button">
+                <button class="btn btn-in-cart" type="button">В корзину</button>
+                <button class="btn-in-compare" type="button">Добавить к сравнению</button>
+              </div>
             </li>
-            <li class="color-list-item">
-              <input class="visually-hidden checkbox-blue" id="color-blue" type="checkbox" name="blue" checked/>
-              <label for="color-blue">Синий</label>
+            <li class="catalog-item">
+              <div class="title-wrapper">
+                <a href="#">
+                  <h3 class="catalog-item-title">Непотопляемая селфи-палка</h3>
+                </a>
+                <span class="catalog-item-price">2500 руб.</span>
+              </div>
+              <img class="catalog-item-photo" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" />
+              <div class="catalog-item-flag-new">new</div>
+              <div class="catalog-item-button">
+                <button class="btn btn-in-cart" type="button">В корзину</button>
+                <button class="btn-in-compare" type="button">Добавить к сравнению</button>
+              </div>
             </li>
-            <li class="color-list-item">
-              <input class="visually-hidden checkbox-red" id="color-red" type="checkbox" name="red" checked/>
-              <label for="color-red">Красный</label>
-            </li>
-            <li class="color-list-item">
-              <input class="visually-hidden checkbox-pink" id="color-pink" type="checkbox" name="pink" />
-              <label for="color-pink">Розовый</label>
+            <li class="catalog-item">
+              <div class="title-wrapper">
+                <a href="#">
+                  <h3 class="catalog-item-title">Селфи-палка "Следуй за мной"</h3>
+                </a>
+                <span class="catalog-item-price">4900 руб.</span>
+              </div>
+              <img class="catalog-item-photo" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной" />
+              <div class="catalog-item-flag-new catalog-item-flag-new-current">new</div>
+              <div class="catalog-item-button">
+                <button class="btn btn-in-cart" type="button">В корзину</button>
+                <button class="btn-in-compare" type="button">Добавить к сравнению</button>
+              </div>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter-bluetooth">
-          <legend>Bluetooth</legend>
-          <ul class="bluetooth-list">
-            <li class="bluetooth-list-item">
-              <input class="visually-hidden radio-bluetooth-has" id="bluetooth-has" type="radio" name="has-bluetooth" value="true" checked/>
-              <label for="bluetooth-has">Есть</label>
+          <ul class="pagination-list">
+            <li class="pagination-item pagination-item-prev">
+              <a>Назад</a>
             </li>
-            <li class="bluetooth-list-item">
-              <input class="visually-hidden radio-bluetooth-has-not" id="bluetooth-has-not" type="radio" name="has-bluetooth" value="false" />
-              <label for="bluetooth-has-not">нет</label>
+            <li class="pagination-item pagination-item-current">
+              <a>1</a>
+            </li>
+            <li class="pagination-item">
+              <a href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a href="#">3</a>
+            </li>
+            <li class="pagination-item pagination-item-next">
+              <a href="#">Вперед</a>
             </li>
           </ul>
-        </fieldset>
-        <button class="btn btn-filter" type="submit">Показать</button>
-      </form>
-    </section>
-    <section class="catalog">
-      <h2 class="visually-hidden">Список моноподов для селфи</h2>
-      <div class="sort-field">
-        <h3>Сортировка:</h3>
-        <ul class="sort-by-list">
-          <li class="sort-by-item sort-by-item-current">
-            <a href="#">По цене</a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer-navigation">
+    <div class="container">
+      <div class="top-navigation">
+        <a class="logo-footer" href="index.html"><img src="img/logo-device-footer.svg" width="162" height="36" alt="Логотип интернет-магазина Девайс"/></a>
+        <ul class="footer-user-navigation-list">
+          <li class="footer-user-navigation-item login-link">
+            <a href="#">Войти</a>
           </li>
-          <li class="sort-by-item">
-            <a href="#">По типу</a>
+          <li class="footer-user-navigation-item compare-link">
+            <a href="#">Сравнить</a>
           </li>
-          <li class="sort-by-item">
-            <a href="#">По популярности</a>
+          <li class="footer-user-navigation-item cart-link">
+            <a href="#">Корзина</a>
           </li>
         </ul>
-        <ul class="sort-order-list">
-          <li class="sort-order-item sort-order-item-current">
-            <a href="#">по возрастению</a>
+        <ul class="footer-user-navigation-list footer-user-navigation-list-current">
+          <li class="footer-user-navigation-item logout-link">
+            <a href="#">Выйти</a>
           </li>
-          <li class="sort-order-item">
-            <a href="#">по уменьшению</a>
+          <li class="footer-user-navigation-item compare-link">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="footer-user-navigation-item cart-link">
+            <a href="#">Корзина</a>
           </li>
         </ul>
       </div>
-      <ul class="catalog-list">
-        <li class="catalog-item">
-          <a href="#">
-            <h3 class="catalog-item-title">Любительская селфи-палка</h3>
-          </a>
-          <img class="catalog-item-photo" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка" />
-          <span class="catalog-item-price">500 руб.</span>
-          <div class="catalog-item-flag-new">new</div>
-          <button class="btn btn-in-cart" type="button">В корзину</button>
-          <button class="btn-in-compare" type="button">Добавить к сравнению</button>
-        </li>
-        <li class="catalog-item">
-          <a href="#">
-            <h3 class="catalog-item-title">Профессиональная селфи-палка</h3>
-          </a>
-          <img class="catalog-item-photo" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" />
-          <span class="catalog-item-price">1500 руб.</span>
-          <div class="catalog-item-flag-new">new</div>
-          <button class="btn btn-in-cart" type="button">В корзину</button>
-          <button class="btn-in-compare" type="button">Добавить к сравнению</button>
-        </li>
-        <li class="catalog-item">
-          <a href="#">
-            <h3 class="catalog-item-title">Непотопляемая селфи-палка</h3>
-          </a>
-          <img class="catalog-item-photo" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" />
-          <span class="catalog-item-price">2500 руб.</span>
-          <div class="catalog-item-flag-new">new</div>
-          <button class="btn btn-in-cart" type="button">В корзину</button>
-          <button class="btn-in-compare" type="button">Добавить к сравнению</button>
-        </li>
-        <li class="catalog-item">
-          <a href="#">
-            <h3 class="catalog-item-title">Селфи-палка "Следуй за мной"</h3>
-          </a>
-          <img class="catalog-item-photo" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной" />
-          <span class="catalog-item-price">4900 руб.</span>
-          <div class="catalog-item-flag-new catalog-item-flag-new-current">new</div>
-          <button class="btn btn-in-cart" type="button">В корзину</button>
-          <button class="btn-in-compare" type="button">Добавить к сравнению</button>
-        </li>
-      </ul>
-      <ul class="pagination-list">
-        <li class="pagination-item pagination-item-prev">
-          <a>Назад</a>
-        </li>
-        <li class="pagination-item pagination-item-current">
-          <a>1</a>
-        </li>
-        <li class="pagination-item">
-          <a href="#">2</a>
-        </li>
-        <li class="pagination-item">
-          <a href="#">3</a>
-        </li>
-        <li class="pagination-item pagination-item-next">
-          <a href="#">Вперед</a>
-        </li>
-      </ul>
-    </section>
-  </main>
-  <footer class="footer-navigation">
-    <a class="logo-footer" href="index.html"><img src="img/logo-device-footer.svg" width="162" height="36" alt="Логотип интернет-магазина Девайс"/></a>
-    <ul class="footer-user-navigation-list">
-      <li class="footer-user-navigation-item login-link">
-        <a href="#">Войти</a>
-      </li>
-      <li class="footer-user-navigation-item compare-link">
-        <a href="#">Сравнить</a>
-      </li>
-      <li class="footer-user-navigation-item cart-link">
-        <a href="#">Корзина</a>
-      </li>
-    </ul>
-    <ul class="footer-user-navigation-list footer-user-navigation-list-current">
-      <li class="footer-user-navigation-item logout-link">
-        <a href="#">Выйти</a>
-      </li>
-      <li class="footer-user-navigation-item compare-link">
-        <a href="#">Сравнить</a>
-      </li>
-      <li class="footer-user-navigation-item cart-link">
-        <a href="#">Корзина</a>
-      </li>
-    </ul>
-    <p>г. Москва, ул. Строителей, 15</p>
-    <ul class="footer-site-navigation-list">
-      <li class="footer-site-navigation-item">
-        <a href="#">Доставка</a>
-      </li>
-      <li class="footer-site-navigation-item">
-        <a href="#">Гарантия</a>
-      </li>
-      <li class="footer-site-navigation-item">
-        <a href="#">Контакты</a>
-      </li>
-    </ul>
-    <p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
-    <ul class="social-list">
-      <li class="social-item">
-        <a class="social-button" href="#">Facebook</a>
-      </li>
-      <li class="social-item">
-        <a class="social-button" href="#">Instagram</a>
-      </li>
-      <li class="social-item">
-        <a class="social-button" href="#">Twitter</a>
-      </li>
-    </ul>
-    <a class="academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      <div class="middle-navigation">
+        <p>г. Москва, ул. Строителей, 15</p>
+        <ul class="footer-site-navigation-list">
+          <li class="footer-site-navigation-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="footer-site-navigation-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="footer-site-navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
+      </div>
+      <div class="bottom-navigation">
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-button" href="#">Facebook</a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="#">Instagram</a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="#">Twitter</a>
+          </li>
+        </ul>
+        <a class="academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      </div>
+    </div>
   </footer>
 </body>
 
