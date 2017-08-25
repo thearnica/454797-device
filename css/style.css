@@ -46,6 +46,14 @@ body {
   visibility: hidden;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+
+/*********Дебаг для разметки сетки***********/
+
 .debug form,
 .debug ul,
 .debug li,
@@ -64,6 +72,9 @@ body {
 .debug th {
   box-shadow: 0 0 1px black;
 }
+
+
+/*********Дебаг для разметки сетки***********/
 
 a {
   text-decoration: none;
@@ -110,12 +121,6 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.container {
-  width: 1160px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
 .navigation {
   display: flex;
   flex-direction: column;
@@ -129,7 +134,7 @@ a {
 .logo-header {
   width: 164px;
   height: 38px;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .logo-header:hover,
@@ -144,11 +149,13 @@ a {
 .user-navigation-wrapper {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .search-form {
+  position: relative;
   width: 440px;
+  height: 57px;
   margin-right: 100px;
   font-size: 15px;
   font-weight: 300;
@@ -158,10 +165,28 @@ a {
 }
 
 .search-form input {
+  width: 325px;
+  height: 55px;
+  margin-left: 25px;
   font: inherit;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(247, 226, 150, 1);
   border: none;
+}
+
+.search-form label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 316px;
+  height: 46px;
+  padding-left: 38px;
+}
+
+.search-form button {
+  width: 85px;
+  height: 57px;
 }
 
 .search-form label {
@@ -195,6 +220,7 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-top: 10px;
 }
 
 .profile-navigation-list {
@@ -264,12 +290,12 @@ a {
 }
 
 .site-navigation-item-delivery {
-  width: 159px;
+  width: 158px;
 }
 
 .site-navigation-item-warranty {
   width: 140px;
-  margin-right: 81px;
+  margin-right: 82px;
 }
 
 .site-navigation-item-contacts {
@@ -307,12 +333,8 @@ a {
   margin-right: 40px;
 }
 
-.catalog-menu-item:nth-last-child(2) {
-  margin-right: 200px;
-}
-
 .catalog-menu-item:last-child {
-  margin-right: 440px;
+  margin-right: 200px;
 }
 
 .catalog-menu-item a {
@@ -474,12 +496,12 @@ a {
   letter-spacing: 0.18px;
 }
 
-.services-wrapper {
+.services {
   min-height: 390px;
   background-color: rgba(229, 229, 229, 1);
 }
 
-.services {
+.service-slider-box {
   display: flex;
   flex-direction: row;
 }
@@ -616,7 +638,6 @@ a {
   display: block;
   width: 560px;
   height: 220px;
-  /* Временный размер блока */
   background-color: rgba(229, 229, 229, 1);
   background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C220&z=15");
   background-position: 50% 50%;
@@ -632,14 +653,11 @@ a {
   width: 260px;
 }
 
-.footer-wrapper {
-  background-color: rgba(70, 70, 70, 1);
-}
-
 .footer-navigation {
   min-height: 190px;
   padding-top: 65px;
   padding-bottom: 65px;
+  background-color: rgba(70, 70, 70, 1);
 }
 
 .top-navigation,
