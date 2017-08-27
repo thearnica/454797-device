@@ -9,13 +9,13 @@
 </head>
 
 <body class="debug">
-  <header>
-    <nav class="navigation container">
+  <header class="header-navigation container">
+    <nav class="navigation">
       <a class="logo-header"><img src="img/logo-device.svg" width="164" height="36" alt="Логотип интернет-магазина Девайс"/></a>
       <div class="user-navigation-wrapper">
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <span class="search-icon"></span>
           <input id="search" type="search" name="search" placeholder="Поиск по сайту">
-          <label for="search">Поиск по сайту</label>
           <button type="submit">Найти</button>
         </form>
         <ul class="profile-navigation-list profile-navigation-list-current">
@@ -104,18 +104,14 @@
                 <label for="slide-3" aria-label="Слайд №3" tabindex="0"></label>
               </div>
             </div>
-            <table class="slider-item-specification">
-              <tr>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
-              <tr>
-                <th>Длина палки</th>
-                <th>Вес палки</th>
-                <th>Материал</th>
-              </tr>
-            </table>
+            <dl class="slider-item-specification count-3">
+              <dt>Длина палки</dt>
+              <dd>8,5 м</dd>
+              <dt>Вес палки</dt>
+              <dd>5 кг</dd>
+              <dt>Материал</dt>
+              <dd>Карбон</dd>
+            </dl>
           </div>
           <img class="slider-item-photo" src="img/slider-1.png" width="384" height="486" alt="Монопод" />
         </li>
@@ -139,14 +135,10 @@
                 <label for="slide-3" aria-label="Слайд №3" tabindex="0"></label>
               </div>
             </div>
-            <table class="slider-item-specification">
-              <tr>
-                <td>48 часов</td>
-              </tr>
-              <tr>
-                <th>Без подзарядки</th>
-              </tr>
-            </table>
+            <dl class="slider-item-specification count-1">
+              <dt>Без подзарядки</dt>
+              <dd>48 часов</dd>
+            </dl>
           </div>
           <img class="slider-item-photo" src="img/slider-2.png" width="345" height="485" alt="Часы" />
         </li>
@@ -170,16 +162,12 @@
                 <label for="slide-3" aria-label="Слайд №3" tabindex="0"></label>
               </div>
             </div>
-            <table class="slider-item-specification">
-              <tr>
-                <td>800 м</td>
-                <td>50 м</td>
-              </tr>
-              <tr>
-                <th>Дальность полета</th>
-                <th>Радиус поражения</th>
-              </tr>
-            </table>
+            <dl class="slider-item-specification count-2">
+              <dt>Дальность полета</dt>
+              <dd>800 м</dd>
+              <dt>Радиус поражения</dt>
+              <dd>50 м</dd>
+            </dl>
           </div>
           <img class="slider-item-photo" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер" />
         </li>
