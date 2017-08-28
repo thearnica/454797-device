@@ -99,9 +99,9 @@
             <div class="slider-navigation">
               <a class="btn btn-slider" href="#">Подробнее</a>
               <div class="slider-controls">
-                <label for="slide-1" aria-label="Слайд №1" tabindex="0"></label>
-                <label for="slide-2" aria-label="Слайд №2" tabindex="0"></label>
-                <label for="slide-3" aria-label="Слайд №3" tabindex="0"></label>
+                <label for="slide-1" aria-label="Слайд №1" tabindex="0" role="button"></label>
+                <label for="slide-2" aria-label="Слайд №2" tabindex="0" role="button"></label>
+                <label for="slide-3" aria-label="Слайд №3" tabindex="0" role="button"></label>
               </div>
             </div>
             <dl class="slider-item-specification count-3">
@@ -130,9 +130,9 @@
             <div class="slider-navigation">
               <a class="btn btn-slider" href="#">Подробнее</a>
               <div class="slider-controls">
-                <label for="slide-1" aria-label="Слайд №1" tabindex="0"></label>
-                <label for="slide-2" aria-label="Слайд №2" tabindex="0"></label>
-                <label for="slide-3" aria-label="Слайд №3" tabindex="0"></label>
+                <label for="slide-1" aria-label="Слайд №1" tabindex="0" role="button"></label>
+                <label for="slide-2" aria-label="Слайд №2" tabindex="0" role="button"></label>
+                <label for="slide-3" aria-label="Слайд №3" tabindex="0" role="button"></label>
               </div>
             </div>
             <dl class="slider-item-specification count-1">
@@ -157,9 +157,9 @@
             <div class="slider-navigation">
               <a class="btn btn-slider" href="#">Подробнее</a>
               <div class="slider-controls">
-                <label for="slide-1" aria-label="Слайд №1" tabindex="0"></label>
-                <label for="slide-2" aria-label="Слайд №2" tabindex="0"></label>
-                <label for="slide-3" aria-label="Слайд №3" tabindex="0"></label>
+                <label for="slide-1" aria-label="Слайд №1" tabindex="0" role="button"></label>
+                <label for="slide-2" aria-label="Слайд №2" tabindex="0" role="button"></label>
+                <label for="slide-3" aria-label="Слайд №3" tabindex="0" role="button"></label>
               </div>
             </div>
             <dl class="slider-item-specification count-2">
@@ -209,44 +209,42 @@
       </ul>
     </section>
     <section class="services">
-      <div class="container">
+      <div class="service-slider-box container">
         <h2 class="visually-hidden">Услуги и предложения</h2>
-        <div class="service-slider-box">
-          <input class="visually-hidden button-slide-delivery" id="service-slide-1" type="radio" name="slider-button" value="delivery"
-            checked/>
-          <input class="visually-hidden button-slide-warranty" id="service-slide-2" type="radio" name="slider-button" value="warranty"
-          />
-          <input class="visually-hidden button-slide-credit" id="service-slide-3" type="radio" name="slider-button" value="credit"
-          />
-          <div class="service-slider-control">
-            <label class="btn btn-service" for="service-slide-1" tabindex="0">Доставка</label>
-            <label class="btn btn-service" for="service-slide-2" tabindex="0">Гарантия</label>
-            <label class="btn btn-service" for="service-slide-3" tabindex="0">Кредит</label>
-          </div>
-          <ul class="services-slider-list">
-            <li class="services-slider-item services-slider-item-delivery">
-              <h3>Доставка</h3>
-              <p>
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая
-                его на ваш этаж.
-              </p>
-            </li>
-            <li class="services-slider-item services-slider-item-warranty">
-              <h3>Гарантия</h3>
-              <p>
-                Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар не дом, конечно
-                же.
-              </p>
-            </li>
-            <li class="services-slider-item services-slider-item-credit">
-              <h3>Кредит</h3>
-              <p>
-                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для
-                нашего банка, разумеется.
-              </p>
-            </li>
-          </ul>
+        <input class="visually-hidden button-slide-delivery" id="service-slide-1" type="radio" name="slider-button" value="delivery"
+          checked/>
+        <input class="visually-hidden button-slide-warranty" id="service-slide-2" type="radio" name="slider-button" value="warranty"
+        />
+        <input class="visually-hidden button-slide-credit" id="service-slide-3" type="radio" name="slider-button" value="credit"
+        />
+        <div class="service-slider-control">
+          <label class="btn btn-service" for="service-slide-1" tabindex="0">Доставка</label>
+          <label class="btn btn-service" for="service-slide-2" tabindex="0">Гарантия</label>
+          <label class="btn btn-service" for="service-slide-3" tabindex="0">Кредит</label>
         </div>
+        <ul class="services-slider-list">
+          <li class="services-slider-item services-slider-item-delivery">
+            <h3>Доставка</h3>
+            <p>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая
+              его на ваш этаж.
+            </p>
+          </li>
+          <li class="services-slider-item services-slider-item-warranty">
+            <h3>Гарантия</h3>
+            <p>
+              Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар не дом, конечно
+              же.
+            </p>
+          </li>
+          <li class="services-slider-item services-slider-item-credit">
+            <h3>Кредит</h3>
+            <p>
+              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для
+              нашего банка, разумеется.
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="brandname container">

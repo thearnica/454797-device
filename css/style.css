@@ -51,31 +51,6 @@ body {
   margin: 0 auto;
 }
 
-
-/*********Дебаг для разметки сетки***********/
-
-.debug form,
-.debug ul,
-.debug li,
-.debug h1,
-.debug h2,
-.debug h3,
-.debug ol,
-.debug p,
-.debug span,
-.debug input,
-.debug div,
-.debug section,
-.debug nav,
-.debug table,
-.debug td,
-.debug th {
-  box-shadow: 0 0 1px black;
-}
-
-
-/*********Дебаг для разметки сетки***********/
-
 a {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
@@ -85,8 +60,8 @@ a {
   position: relative;
   z-index: 1;
   display: inline-block;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 9px;
   font: inherit;
   text-transform: uppercase;
   text-align: center;
@@ -100,7 +75,7 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  top: 22px;
+  top: 20px;
   z-index: -1;
   display: block;
   box-shadow: 0 0 0 4px rgba(240, 197, 46, 1);
@@ -436,6 +411,7 @@ a {
 
 .catalog-menu-list {
   position: absolute;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -494,14 +470,18 @@ a {
 }
 
 .slider-list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .slider-item {
-  display: none;
+  position: absolute;
+  display: flex;
   flex-direction: row-reverse;
+  width: 1160px;
+  visibility: hidden;
 }
 
 .slider-item-content {
@@ -527,12 +507,15 @@ a {
 }
 
 .slider-title-number {
-  margin-left: 330px;
+  align-self: flex-end;
+  width: 210px;
+  margin-right: 46px;
   margin-top: -12px;
   font-size: 179.2px;
   line-height: 179.2px;
   letter-spacing: 1.79px;
   color: rgba(255, 255, 255, 1);
+  text-align: right;
 }
 
 .slider-title-caption {
@@ -542,19 +525,20 @@ a {
 }
 
 .slider-item-description {
+  width: 480px;
   font-size: 15px;
   font-weight: 300;
   font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 30px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.14px;
   color: rgba(70, 70, 70, 1);
 }
 
 .slider-navigation {
   display: flex;
   flex-direction: row;
-  margin-top: 42px;
-  margin-bottom: 49px;
+  margin-top: 45px;
+  margin-bottom: 52px;
 }
 
 .btn.btn-slider,
@@ -564,7 +548,7 @@ a {
 }
 
 .slider-controls {
-  padding-top: 11px;
+  padding-top: 8px;
   margin-left: 178px;
 }
 
@@ -585,15 +569,15 @@ a {
 }
 
 .radio-slide-1:checked~.slider-list .slider-item:first-child {
-  display: flex;
+  visibility: visible;
 }
 
 .radio-slide-2:checked~.slider-list .slider-item:nth-child(2) {
-  display: flex;
+  visibility: visible;
 }
 
 .radio-slide-3:checked~.slider-list .slider-item:last-child {
-  display: flex;
+  visibility: visible;
 }
 
 .slider-item-specification {
@@ -622,7 +606,7 @@ a {
   order: 2;
   width: 160px;
   margin: 0;
-  padding-top: 8px;
+  padding-top: 10px;
   font-size: 13px;
   font-weight: 300;
   font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -654,7 +638,8 @@ a {
 
 .popular {
   min-height: 250px;
-  margin: 94px auto;
+  margin-top: 94px;
+  margin-bottom: 72px;
 }
 
 .popular-list {
@@ -748,8 +733,8 @@ a {
 }
 
 .services {
-  min-height: 390px;
-  background-image: linear-gradient(to bottom, transparent 78px, rgba(229, 229, 229, 1) 78px);
+  min-height: 30px;
+  background-image: linear-gradient(to bottom, transparent 100px, rgba(229, 229, 229, 1) 100px);
 }
 
 .service-slider-box {
@@ -760,7 +745,12 @@ a {
 .service-slider-control {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 276px;
+  padding-top: 80px;
+  padding-bottom: 47px;
+  margin-bottom: 68px;
+  margin-left: 1px;
+  border-right: 7px solid rgba(0, 0, 0, 1);
 }
 
 .btn.btn-service,
@@ -768,19 +758,56 @@ a {
   width: 160px;
 }
 
+.btn-service {
+  margin-bottom: 24px;
+}
+
+.btn.btn-service::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  width: 280px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 1);
+}
+
 .services-slider-list {
   width: 760px;
   margin: 0;
   padding: 0;
-  padding-left: 120px;
+  padding-left: 117px;
   list-style: none;
 }
 
 .services-slider-item {
+  position: absolute;
+  width: 460px;
   padding-right: 300px;
+  background-repeat: no-repeat;
+  visibility: hidden;
+}
+
+.services-slider-item-delivery {
+  background-image: url("../img/delivery.svg");
+  background-position: 556px 85px;
+}
+
+.services-slider-item-warranty {
+  background-image: url("../img/warranty.svg");
+  background-position: 540px 60px;
+}
+
+.services-slider-item-credit {
+  background-image: url("../img/credit.svg");
+  background-position: 533px 61px;
 }
 
 .services-slider-item h3 {
+  margin-top: 69px;
+  margin-bottom: 26px;
   font-size: 47px;
   letter-spacing: 0.47px;
 }
@@ -792,6 +819,46 @@ a {
   line-height: 30px;
   letter-spacing: 0.15px;
   color: rgba(70, 70, 70, 1);
+}
+
+.button-slide-delivery:checked~.service-slider-control .btn[for="service-slide-1"],
+.button-slide-warranty:checked~.service-slider-control .btn[for="service-slide-2"],
+.button-slide-credit:checked~.service-slider-control .btn[for="service-slide-3"] {
+  color: #f7e184;
+  overflow: visible;
+}
+
+.button-slide-delivery:checked~.service-slider-control .btn[for="service-slide-1"]::after,
+.button-slide-warranty:checked~.service-slider-control .btn[for="service-slide-2"]::after,
+.button-slide-credit:checked~.service-slider-control .btn[for="service-slide-3"]::after {
+  display: block;
+}
+
+.button-slide-delivery:checked~.service-slider-control .btn[for="service-slide-1"]::before,
+.button-slide-warranty:checked~.service-slider-control .btn[for="service-slide-2"]::before,
+.button-slide-credit:checked~.service-slider-control .btn[for="service-slide-3"]::before {
+  display: none;
+}
+
+.button-slide-delivery:checked~.services-slider-list .services-slider-item-delivery {
+  visibility: visible;
+}
+
+.button-slide-warranty:checked~.services-slider-list .services-slider-item-warranty {
+  visibility: visible;
+}
+
+.button-slide-credit:checked~.services-slider-list .services-slider-item-credit {
+  visibility: visible;
+}
+
+.btn.btn-service:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.brandname {
+  margin-top: 95px;
+  margin-bottom: 97px;
 }
 
 .brand-list {
