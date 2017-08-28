@@ -510,9 +510,20 @@ a {
 }
 
 .slider-item-title {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 0;
+}
+
+.slider-item-title::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 1px;
+  display: block;
+  width: 100px;
+  border-top: 7px solid rgba(255, 255, 255, 1);
 }
 
 .slider-title-number {
@@ -661,7 +672,7 @@ a {
 
 .popular-item a {
   position: relative;
-  display: inline-block;
+  display: block;
   min-height: 30px;
   padding-top: 195px
 }
@@ -684,31 +695,36 @@ a {
   width: 160px;
   height: 160px;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
 .popular-link-1::after {
   background-image: url("../img/popular-1.svg");
+  background-position: 50% 49%;
 }
 
 .popular-link-2::after {
   background-image: url("../img/popular-2.svg");
+  background-position: 51% 91%;
 }
 
 .popular-link-3::after {
   background-image: url("../img/popular-3.svg");
+  background-position: 55% 51%;
 }
 
 .popular-link-4::after {
   background-image: url("../img/popular-4.svg");
+  background-position: 52% 52%;
 }
 
 .popular-link-5::after {
   background-image: url("../img/popular-5.svg");
+  background-position: 53% 50%;
 }
 
 .popular-link-6::after {
   background-image: url("../img/popular-6.svg");
+  background-position: 45% 53%;
 }
 
 .popular-item h3 {
