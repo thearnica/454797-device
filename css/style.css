@@ -103,18 +103,18 @@ a {
   top: 22px;
   z-index: -1;
   display: block;
-  box-shadow: 0 0 0 4px #f0c52e;
+  box-shadow: 0 0 0 4px rgba(240, 197, 46, 1);
   transition-property: box-shadow;
   transition-duration: 300ms;
 }
 
 .btn:hover::before,
 .btn:focus::before {
-  box-shadow: 0 0 0px 20px #f0c52e;
+  box-shadow: 0 0 0px 20px rgba(240, 197, 46, 1);
 }
 
 .btn:active::before {
-  box-shadow: 0 0 0px 20px #f0c52e;
+  box-shadow: 0 0 0px 20px rgba(240, 197, 46, 1);
 }
 
 .btn:active {
@@ -570,7 +570,7 @@ a {
 .radio-slide-1:checked~.slider-list .slider-controls label[for="slide-1"],
 .radio-slide-2:checked~.slider-list .slider-controls label[for="slide-2"],
 .radio-slide-3:checked~.slider-list .slider-controls label[for="slide-3"] {
-  box-shadow: 0 0 0 1px #000000, inset 0 0 0 1px #000000;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 1), inset 0 0 0 1px rgba(0, 0, 0, 1);
 }
 
 .radio-slide-1:checked~.slider-list .slider-item:first-child {
@@ -643,6 +643,7 @@ a {
 
 .popular {
   min-height: 250px;
+  margin: 94px auto;
 }
 
 .popular-list {
@@ -658,15 +659,81 @@ a {
   width: 160px;
 }
 
+.popular-item a {
+  position: relative;
+  display: inline-block;
+  min-height: 30px;
+  padding-top: 195px
+}
+
+.popular-item a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: rgba(247, 226, 150, 1);
+}
+
+.popular-item a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.popular-link-1::after {
+  background-image: url("../img/popular-1.svg");
+}
+
+.popular-link-2::after {
+  background-image: url("../img/popular-2.svg");
+}
+
+.popular-link-3::after {
+  background-image: url("../img/popular-3.svg");
+}
+
+.popular-link-4::after {
+  background-image: url("../img/popular-4.svg");
+}
+
+.popular-link-5::after {
+  background-image: url("../img/popular-5.svg");
+}
+
+.popular-link-6::after {
+  background-image: url("../img/popular-6.svg");
+}
+
 .popular-item h3 {
   margin: 0;
   font-size: 18px;
   letter-spacing: 0.18px;
 }
 
+.popular-item a:hover::before,
+.popular-item a:focus::before,
+.popular-item a:active::before {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.popular-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.popular-item a:active::after {
+  opacity: 0.3;
+}
+
 .services {
   min-height: 390px;
-  background-image: linear-gradient(to bottom, transparent 75px, rgba(229, 229, 229, 1) 75px);
+  background-image: linear-gradient(to bottom, transparent 78px, rgba(229, 229, 229, 1) 78px);
 }
 
 .service-slider-box {
