@@ -38,6 +38,22 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 
+/* .debug form,
+.debug ul,
+.debug li,
+.debug h1,
+.debug h2,
+.debug h3,
+.debug ol,
+.debug p,
+.debug span,
+.debug input,
+.debug div,
+.debug fieldset,
+.debug legend {
+  box-shadow: 0 0 1px black;
+} */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1305,6 +1321,7 @@ a {
 .modal-map iframe {
   border: none;
 }
+
 .modal-close {
   position: absolute;
   top: 20px;
@@ -1330,9 +1347,12 @@ a {
   opacity: 0.3;
 }
 
+
 /****************************************Страница раздела каталога****************************************/
 
 .content h1 {
+  margin-top: 32px;
+  margin-bottom: 15px;
   margin-left: 60px;
   font-size: 47px;
   letter-spacing: 0.47px;
@@ -1344,6 +1364,7 @@ a {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  margin-bottom: 39px;
   margin-left: 60px;
   list-style: none;
 }
@@ -1412,25 +1433,92 @@ a {
 }
 
 .filters h2 {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-bottom: 95px;
   font-size: 16px;
   letter-spacing: 3.2px;
   text-transform: uppercase;
 }
 
+.filters-form fieldset {
+  padding: 0;
+  border: none;
+}
+
 .filters-form legend {
+  position: relative;
+  margin-left: -2px;
   font-size: 18px;
   letter-spacing: 0.18px;
 }
 
-.filter-price {}
+.filters-form legend::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  display: block;
+  width: 200px;
+  border-top: 2px solid rgba(0, 0, 0, 1);
+}
+
+.filter-price {
+  min-height: 140px;
+}
 
 .range-controls {
   position: relative;
   width: 200px;
   height: 40px;
+  margin-top: 35px;
+}
+
+.scale {
+  margin-top: 12px;
+  height: 2px;
+  background: rgba(219, 219, 219, 1);
+}
+
+.bar {
+  height: 2px;
+  background-color: rgba(145, 201, 47, 1);
+  width: 110px;
+}
+
+.toggle {
+  position: absolute;
+  top: -9px;
+  min-width: 50px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.toggle label {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border: 8px solid rgba(255, 255, 255, 1);
+  background: rgba(219, 219, 219, 1);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.max-toggle label {
+  margin: 0 auto;
+}
+
+.min-toggle {
+  left: -6px;
+}
+
+.max-toggle {
+  left: 85px;
 }
 
 .toggle input {
+  width: 40px;
+  height: 15px;
   font-size: 14px;
   font-weight: 300;
   line-height: 22.27px;
@@ -1446,10 +1534,20 @@ a {
   color: rgba(0, 0, 0, 0.2);
 }
 
+.filter-color {
+  min-height: 285px;
+}
+
 .color-list {
   margin: 0;
   padding: 0;
+  margin-top: 18px;
   list-style: none;
+}
+
+.color-list-item {
+  position: relative;
+  padding-left: 37px;
 }
 
 .color-list-item label {
@@ -1460,10 +1558,54 @@ a {
   letter-spacing: 0.14px;
 }
 
+.color-list-item label::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -3px;
+  display: block;
+  width: 19px;
+  height: 19px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 3px;
+}
+
+.color-list-item label::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 2px;
+  display: none;
+  width: 17px;
+  height: 8px;
+  border-left: 4px solid rgba(0, 0, 0, 1);
+  border-bottom: 4px solid rgba(0, 0, 0, 1);
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 1px -1px rgba(255, 255, 255, 1), inset 0 -3px 1px -1px rgba(255, 255, 255, 1);
+}
+
+.checkbox-black:checked~label[for="color-black"]::after,
+.checkbox-white:checked~label[for="color-white"]::after,
+.checkbox-blue:checked~label[for="color-blue"]::after,
+.checkbox-red:checked~label[for="color-red"]::after,
+.checkbox-pink:checked~label[for="color-pink"]::after {
+  display: block;
+}
+
+.filter-bluetooth {
+  min-height: 152px;
+}
+
 .bluetooth-list {
   margin: 0;
   padding: 0;
+  margin-top: 18px;
   list-style: none;
+}
+
+.bluetooth-list-item {
+  position: relative;
+  padding-left: 37px;
 }
 
 .bluetooth-list-item label {
@@ -1472,6 +1614,25 @@ a {
   font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 40px;
   letter-spacing: 0.14px;
+}
+
+.bluetooth-list-item label::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -3px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(0, 0, 0, 1);
+  border: 4px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.radio-bluetooth-has:checked~label[for="bluetooth-has"]::before,
+.radio-bluetooth-has-not:checked~label[for="bluetooth-has-not"]::before {
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 1);
 }
 
 .btn.btn-filter,
