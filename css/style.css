@@ -38,22 +38,6 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 
-/* .debug form,
-.debug ul,
-.debug li,
-.debug h1,
-.debug h2,
-.debug h3,
-.debug ol,
-.debug p,
-.debug span,
-.debug input,
-.debug div,
-.debug fieldset,
-.debug legend {
-  box-shadow: 0 0 1px black;
-} */
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -334,6 +318,7 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.navigation-item-current a,
 .profile-navigation-item a:active,
 .user-navigation-item a:active {
   color: rgba(0, 0, 0, 0.3);
@@ -1370,6 +1355,9 @@ a {
 }
 
 .breadcrumb-item {
+  position: relative;
+  padding-right: 20px;
+  margin-right: 20px;
   font-size: 14px;
   font-weight: 400;
   font-family: "OpenSans", "Segoe UI", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1381,6 +1369,19 @@ a {
 .breadcrumb-item a {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb-item a::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 0;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+  transform: rotate(45deg);
 }
 
 .breadcrumb-item a:hover,
@@ -1433,11 +1434,11 @@ a {
 }
 
 .filters h2 {
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 13px;
-  margin-bottom: 95px;
+  margin-bottom: 96px;
   font-size: 16px;
-  letter-spacing: 3.2px;
+  letter-spacing: 3.9px;
   text-transform: uppercase;
 }
 
@@ -1650,14 +1651,15 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  height: 68px;
+  margin-bottom: 70px;
 }
 
 .sort-field h3 {
-  width: 200px;
+  width: 202px;
   margin: 0;
   font-size: 16px;
-  letter-spacing: 3.2px;
+  letter-spacing: 3.9px;
   text-transform: uppercase;
 }
 
@@ -1670,6 +1672,10 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.sort-by-item {
+  margin-right: 29px;
 }
 
 .sort-by-item a {
@@ -1770,14 +1776,24 @@ a {
 
 .catalog-item-flag-new {
   position: absolute;
-  right: 0;
-  top: 0;
+  top: 32px;
+  right: 27px;
+  display: none;
   width: 55px;
-  height: 55px;
+  height: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 14px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+  text-align: center;
   color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.catalog-item-flag-new-current {
+  display: block;
 }
 
 .catalog-item-button {
@@ -1821,16 +1837,18 @@ a {
 .pagination-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  min-height: 70px;
   margin: 0;
   padding: 0;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  margin-top: -8px;
+  margin-bottom: 73px;
   list-style: none;
   background-color: rgba(235, 235, 235, 1);
 }
 
 .pagination-item {
-  min-width: 35px;
+  min-width: 39px;
   text-align: center;
 }
 
@@ -1845,8 +1863,10 @@ a {
 }
 
 .pagination-item a {
+  display: inline-block;
   font-size: 16px;
   letter-spacing: 3.2px;
+  text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1863,6 +1883,10 @@ a {
 .pagination-item-prev a,
 .pagination-item-next a {
   display: inline-block;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 31px;
+  padding-right: 25px;
   color: rgba(0, 0, 0, 1);
 }
 
