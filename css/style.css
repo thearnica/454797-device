@@ -1127,8 +1127,17 @@ a {
   color: rgba(255, 255, 255, 1);
 }
 
+.footer-user-navigation-item a:hover::before,
+.footer-user-navigation-item a:focus::before {
+  opacity: 0.6;
+}
+
 .footer-user-navigation-item a:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-user-navigation-item a:active::before {
+  opacity: 0.3;
 }
 
 .middle-navigation {
