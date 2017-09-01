@@ -1790,9 +1790,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   padding-top: 170px;
-  padding-bottom: 120px;
+  padding-bottom: 129px;
   width: 360px;
-  height: 380px;
   opacity: 0;
   transition-property: opacity;
   transition-duration: 500ms;
