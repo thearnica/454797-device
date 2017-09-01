@@ -1761,7 +1761,7 @@ input[type="radio"].visually-hidden {
   height: 380px;
   opacity: 1;
   transition-property: opacity;
-  transition-duration: 1s;
+  transition-duration: 500ms;
 }
 
 .catalog-item-flag-new {
@@ -1795,7 +1795,7 @@ input[type="radio"].visually-hidden {
   height: 380px;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 1s;
+  transition-duration: 500ms;
 }
 
 .superposition:hover .catalog-item-button {
