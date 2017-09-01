@@ -316,7 +316,6 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-item-catalog {
-  position: relative;
   width: 273px;
   margin-right: 270px;
   margin-left: -1px;
@@ -1002,7 +1001,6 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-user-navigation-item {
-  position: relative;
   margin-left: 40px;
   margin-top: -4px;
 }
@@ -1140,11 +1138,19 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
-  position: relative;
+  position: fixed;
   width: 960px;
   min-height: 560px;
   margin: 0 auto;
   margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.modal-feedback {
+  top: 30%;
+  left: 50%;
+  z-index: 1;
+  margin-left: -480px;
 }
 
 .feedback-form {
