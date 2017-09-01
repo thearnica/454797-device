@@ -1150,6 +1150,7 @@ input[type="radio"].visually-hidden {
   top: 30%;
   left: 50%;
   z-index: 1;
+  display: none;
   margin-left: -480px;
 }
 
@@ -1247,7 +1248,13 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-map {
+  top: 30%;
+  left: 50%;
+  z-index: 1;
+  /* display: none; */
+  margin-left: -480px;
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+  background-color: rgba(219, 219, 219, 1);
   background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=960%2C560&z=15");
   background-position: 50% 50%;
   background-repeat: no-repeat;
