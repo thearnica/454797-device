@@ -1140,7 +1140,6 @@ input[type="radio"].visually-hidden {
 .modal {
   position: fixed;
   width: 960px;
-  min-height: 560px;
   margin: 0 auto;
   margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 1);
@@ -1251,7 +1250,8 @@ input[type="radio"].visually-hidden {
   top: 30%;
   left: 50%;
   z-index: 1;
-  /* display: none; */
+  display: none;
+  height: 560px;
   margin-left: -480px;
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
   background-color: rgba(219, 219, 219, 1);
