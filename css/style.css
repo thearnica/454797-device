@@ -77,6 +77,7 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
   border: none;
   background-color: rgba(255, 255, 255, 0);
+  vertical-align: center;
 }
 
 .btn::before {
@@ -161,6 +162,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 29px;
 }
 
@@ -292,6 +295,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 222px;
   margin-right: 64px;
 }
@@ -316,6 +321,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 214px;
 }
 
@@ -369,18 +376,20 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .site-navigation-item {
-  width: 160px;
+  width: 157px;
 }
 
 .site-navigation-item-catalog {
   width: 273px;
-  margin-right: 270px;
+  margin-right: 268px;
   margin-left: -1px;
 }
 
@@ -390,12 +399,11 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-item-warranty {
-  margin-right: 27px;
+  margin-right: 29px;
 }
 
 .site-navigation-item-contacts {
   text-align: right;
-  margin-right: -3px;
 }
 
 .site-navigation-link {
@@ -595,6 +603,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
   border-radius: 50%;
+  vertical-align: center;
 }
 
 .radio-slide-1:checked~.slider-list .slider-controls label[for="slide-1"],
@@ -708,6 +717,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -969,6 +980,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -981,6 +994,7 @@ input[type="radio"].visually-hidden {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 260px 100px;
+  vertical-align: center;
 }
 
 .brand-logo-1 {
@@ -1145,7 +1159,6 @@ input[type="radio"].visually-hidden {
 }
 
 .logo-footer {
-  display: inline-block;
   width: 162px;
   height: 36px;
 }
@@ -1168,6 +1181,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1299,6 +1314,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 140px;
   margin: 0;
   padding: 0;
@@ -1319,7 +1336,6 @@ input[type="radio"].visually-hidden {
 }
 
 .copyright-button {
-  display: inline-block;
   width: 25px;
   margin-left: 485px;
 }
@@ -1374,6 +1390,10 @@ input[type="radio"].visually-hidden {
 
 .feedback-form p:last-of-type {
   width: 760px;
+}
+
+.feedback-form label {
+  display: block;
 }
 
 .feedback-form input[type="text"],
@@ -1461,7 +1481,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
   background-color: rgba(219, 219, 219, 1);
-  background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=960%2C560&z=15");
+  background-image: url("https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C360&z=15");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -1525,7 +1545,7 @@ input[type="radio"].visually-hidden {
 
 .breadcrumb-item {
   position: relative;
-  padding-right: 20px;
+  padding-right: 15px;
   margin-right: 20px;
   font-size: 14px;
   font-weight: 400;
@@ -1626,6 +1646,7 @@ input[type="radio"].visually-hidden {
 
 .filters-form fieldset {
   padding: 0;
+  margin-bottom: 30px;
   border: none;
 }
 
@@ -1647,7 +1668,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-price {
-  min-height: 140px;
+  min-height: 110px;
 }
 
 .range-controls {
@@ -1725,7 +1746,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-color {
-  min-height: 285px;
+  min-height: 255px;
 }
 
 .color-list {
@@ -1800,7 +1821,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-bluetooth {
-  min-height: 152px;
+  min-height: 122px;
 }
 
 .bluetooth-list {
@@ -2184,6 +2205,7 @@ input[type="radio"].visually-hidden {
   letter-spacing: 3.2px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
+  vertical-align: center;
 }
 
 .pagination-item a:hover,
@@ -2198,7 +2220,6 @@ input[type="radio"].visually-hidden {
 
 .pagination-item-prev a,
 .pagination-item-next a {
-  display: inline-block;
   padding-bottom: 25px;
   padding-top: 25px;
   padding-left: 31px;
