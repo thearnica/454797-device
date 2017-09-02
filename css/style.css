@@ -193,7 +193,7 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 1);
   background-color: rgba(247, 226, 150, 0);
   background-image: url("../img/search.svg");
-  background-position: 3px 22px;
+  background-position: 3px 21px;
   background-repeat: no-repeat;
   border: 2px solid transparent;
 }
@@ -1083,9 +1083,6 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.map iframe {
-  border: none;
-}
 
 .about::before,
 .contacts::before {
