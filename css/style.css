@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
@@ -731,6 +732,12 @@ input[type="radio"].visually-hidden {
   width: 160px;
   height: 160px;
   background-color: rgba(247, 226, 150, 1);
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 .popular-item a::after {
@@ -1082,7 +1089,6 @@ input[type="radio"].visually-hidden {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-
 
 .about::before,
 .contacts::before {
