@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
@@ -196,7 +195,8 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/search.svg");
   background-position: 3px 21px;
   background-repeat: no-repeat;
-  border: 2px solid transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
 }
 
 .search-form button {
@@ -736,8 +736,8 @@ input[type="radio"].visually-hidden {
   -o-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition-duration: 300ms;
-       -o-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 
 .popular-item a::after {
