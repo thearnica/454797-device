@@ -445,15 +445,15 @@
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label for="name">Ваше имя:</label>
-        <input class="feedback-form-static" id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста"/>
+        <input class="field-name" id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста"/>
       </p>
       <p>
         <label for="mail">Ваш e-mail:</label>
-        <input class="feedback-form-static" id="mail" type="email" name="mail" placeholder="Для отправки ответа"/>
+        <input class="field-mail" id="mail" type="email" name="mail" placeholder="Для отправки ответа"/>
       </p>
       <p>
         <label class="feedback-message" for="message">Текст письма:</label>
-        <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
+        <textarea class="field-message" id="message" name="message" placeholder="В свободной форме"></textarea>
       </p>
       <button class="btn btn-send" type="submit">Отправить</button>
     </form>
@@ -470,8 +470,8 @@
     var close = popup.querySelector(".modal-close");
 
     var form = popup.querySelector("form");
-    var nickname = form.querySelector("[name=name]");
-    var mail = form.querySelector("[name=mail]");
+    var nickname = form.querySelector(".field-name");
+    var mail = form.querySelector(".field-mail");
 
     link.addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -485,27 +485,21 @@
     });
 
     form.addEventListener("submit", function (evt) {
-      evt.preventDefault();
-      if (!nickname.value && !mail.value){
-        evt.preventDefault();
-        nickname.classList.add("feedback-form-invalid");
-        nickname.classList.remove("feedback-form-static");
-        mail.classList.add("feedback-form-invalid");
-        mail.classList.remove("feedback-form-static");
-      }
       if (!nickname.value || !mail.value){
         evt.preventDefault();
         if (!nickname.value){
-          evt.preventDefault();
-          nickname.classList.add("feedback-form-invalid");
-          nickname.classList.remove("feedback-form-static");
+          nickname.classList.add("field-invalid");
         } 
-        else {
-          evt.preventDefault();
-          mail.classList.add("feedback-form-invalid");
-          mail.classList.remove("feedback-form-static");
+        if (!mail.value) {
+          mail.classList.add("field-invalid");
         }
-      } 
+      }
+      if (nickname.value){
+        nickname.classList.remove("field-invalid");
+      }
+      if (mail.value){
+        mail.classList.remove("field-invalid");
+      }
     });
 
     window.addEventListener("keydown", function (evt) {
@@ -515,7 +509,7 @@
         }
       }
     });
-    
+
     var maplink = document.querySelector(".map");
     var mappopup = document.querySelector(".modal-map");
     var mapclose = mappopup.querySelector(".modal-close");

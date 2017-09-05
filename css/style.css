@@ -1396,8 +1396,9 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.feedback-form input,
-.feedback-form textarea {
+.field-name,
+.field-mail,
+.field-message {
   padding-left: 20px;
   margin-top: 10px;
   font-size: 14px;
@@ -1406,60 +1407,62 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: rgba(70, 70, 70, 1);
   border: none;
+  background-color: rgba(229, 229, 229, 0.5);
   outline: 0;
 }
 
-.feedback-form input[type="text"],
-.feedback-form input[type="email"] {
+.field-name,
+.field-mail {
   width: 340px;
   height: 50px;
 }
 
-.feedback-form textarea {
+.field-message {
   width: 740px;
   min-height: 155px;
   padding-top: 20px;
   resize: none;
-  background-color: rgba(229, 229, 229, 0.5);
 }
 
-.feedback-form-static {
-  background-color: rgba(229, 229, 229, 0.5);
-}
-
-.feedback-form input:hover,
-.feedback-form textarea:hover {
+.field-name:hover,
+.field-mail:hover,
+.field-message:hover {
   background-color: rgba(229, 229, 229, 0.8);
 }
 
-.feedback-form input:focus,
-.feedback-form textarea:focus {
+.field-name:focus,
+.field-mail:focus,
+.field-message:focus {
   background-color: rgba(229, 229, 229, 0);
   -webkit-box-shadow: inset 0 0 0 3px rgba(240, 197, 46, 1);
   box-shadow: inset 0 0 0 3px rgba(240, 197, 46, 1);
 }
 
-.feedback-form-invalid {
+.field-invalid {
   background-color: rgba(237, 181, 181, 0.5);
 }
 
-.feedback-form input::-webkit-input-placeholder,
-.feedback-form textarea::-webkit-input-placeholder {
+.field-name::-webkit-input-placeholder,
+.field-mail::-webkit-input-placeholder,
+.field-message::-webkit-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
-.feedback-form input::-moz-placeholder,
-.feedback-form textarea::-moz-placeholder {
+.field-name::-moz-placeholder,
+.field-mail::-moz-placeholder,
+.field-message:-moz-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
-.feedback-form input:-moz-placeholder,
-.feedback-form textarea:-moz-placeholder {
+.field-name:-moz-placeholder,
+.field-mail:-moz-placeholder,
+.field-message:-moz-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
-.feedback-form input:-ms-input-placeholder,
-.feedback-form textarea:-ms-input-placeholder {
+.field-name:-ms-input-placeholder,
+.field-mail:-ms-input-placeholder,
+.field-message:-ms-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
@@ -1507,6 +1510,7 @@ input[type="radio"].visually-hidden {
 .modal-close:active {
   opacity: 0.3;
 }
+
 @keyframes bounce {
   0% {
     transform: translateX(100px);
@@ -1527,6 +1531,7 @@ input[type="radio"].visually-hidden {
     transform: translateX(0);
   }
 }
+
 .modal-show {
   display: block;
   animation: bounce;
