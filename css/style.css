@@ -1513,10 +1513,12 @@ input[type="radio"].visually-hidden {
 
 @keyframes bounce {
   0% {
-    transform: scale(0.2);
+    transform: translateX(50px);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -1524,6 +1526,11 @@ input[type="radio"].visually-hidden {
   display: block;
   animation: bounce;
   animation-duration: 500ms;
+}
+
+.modal-open {
+  pointer-events: none;
+  user-select: none;
 }
 
 
