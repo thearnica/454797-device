@@ -472,6 +472,7 @@
     var form = popup.querySelector("form");
     var nickname = form.querySelector(".field-name");
     var mail = form.querySelector(".field-mail");
+    var message = form.querySelector(".field-message");
 
     link.addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -485,7 +486,7 @@
     });
 
     form.addEventListener("submit", function (evt) {
-      if (!nickname.value || !mail.value){
+      if (!nickname.value || !mail.value || !message.value){
         evt.preventDefault();
         if (!nickname.value){
           nickname.classList.add("field-invalid");
@@ -493,12 +494,18 @@
         if (!mail.value) {
           mail.classList.add("field-invalid");
         }
+        if (!message.value) {
+          message.classList.add("field-invalid");
+        }  
       }
       if (nickname.value){
         nickname.classList.remove("field-invalid");
       }
       if (mail.value){
         mail.classList.remove("field-invalid");
+      }
+      if (message.value){
+        message.classList.remove("field-invalid");
       }
     });
 
