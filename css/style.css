@@ -2096,6 +2096,10 @@ input[type="radio"].visually-hidden {
   margin-bottom: 45px;
 }
 
+.catalog-item:nth-child(2) .catalog-item-title {
+  word-spacing: 25px;
+}
+
 .catalog-item-title {
   width: 260px;
   margin: 0;
