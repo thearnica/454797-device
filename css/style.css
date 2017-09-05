@@ -77,7 +77,7 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .btn::before {
@@ -148,7 +148,7 @@ input[type="radio"].visually-hidden {
 }
 
 .logo-header:active {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .user-navigation-wrapper {
@@ -406,6 +406,10 @@ input[type="radio"].visually-hidden {
   text-align: right;
 }
 
+.site-navigation-item-contacts .site-navigation-link {
+  margin-right: -4px;
+}
+
 .site-navigation-link {
   letter-spacing: 3.6px;
   text-transform: uppercase;
@@ -603,7 +607,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
   border-radius: 50%;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .radio-slide-1:checked~.slider-list .slider-controls label[for="slide-1"],
@@ -716,7 +720,7 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
@@ -726,6 +730,11 @@ input[type="radio"].visually-hidden {
 
 .popular-item {
   width: 160px;
+  margin-right: 40px;
+}
+
+.popular-item:nth-child(6n) {
+  margin-right: 0;
 }
 
 .popular-item a {
@@ -923,6 +932,7 @@ input[type="radio"].visually-hidden {
   color: rgba(70, 70, 70, 1);
 }
 
+.btn.btn-service:active,
 .button-slide-delivery:checked~.service-slider-control .btn[for="service-slide-1"],
 .button-slide-warranty:checked~.service-slider-control .btn[for="service-slide-2"],
 .button-slide-credit:checked~.service-slider-control .btn[for="service-slide-3"] {
@@ -930,12 +940,14 @@ input[type="radio"].visually-hidden {
   overflow: visible;
 }
 
+.btn.btn-service:active::after,
 .button-slide-delivery:checked~.service-slider-control .btn[for="service-slide-1"]::after,
 .button-slide-warranty:checked~.service-slider-control .btn[for="service-slide-2"]::after,
 .button-slide-credit:checked~.service-slider-control .btn[for="service-slide-3"]::after {
   display: block;
 }
 
+.btn.btn-service:active::before,
 .button-slide-delivery:checked~.service-slider-control .btn[for="service-slide-1"]::before,
 .button-slide-warranty:checked~.service-slider-control .btn[for="service-slide-2"]::before,
 .button-slide-credit:checked~.service-slider-control .btn[for="service-slide-3"]::before {
@@ -960,13 +972,9 @@ input[type="radio"].visually-hidden {
   transform: translate(-1520px);
 }
 
-.btn.btn-service:active {
-  color: rgba(0, 0, 0, 1);
-}
-
 .brandname {
   margin-top: 95px;
-  margin-bottom: 97px;
+  margin-bottom: 101px;
 }
 
 .brand-list {
@@ -994,7 +1002,7 @@ input[type="radio"].visually-hidden {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 260px 100px;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .brand-logo-1 {
@@ -1062,15 +1070,29 @@ input[type="radio"].visually-hidden {
 }
 
 .transport-company-list {
+  margin: 0;
+  padding: 0;
   margin-top: 66px;
   margin-bottom: 55px;
-  padding-left: 35px;
   list-style: none;
 }
 
 .transport-company-list li {
+  position: relative;
+  padding-left: 35px;
   font-size: 16px;
   line-height: 40px;
+}
+
+.transport-company-list li:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 50%;
 }
 
 .contacts {
@@ -1169,7 +1191,7 @@ input[type="radio"].visually-hidden {
 }
 
 .logo-footer:active {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .footer-user-navigation-list {
@@ -1351,13 +1373,11 @@ input[type="radio"].visually-hidden {
 
 .modal {
   position: fixed;
-  top: 20%;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   width: 960px;
-  margin: 0 auto;
-  margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -1513,11 +1533,11 @@ input[type="radio"].visually-hidden {
 
 @keyframes bounce {
   0% {
-    transform: translateX(50px);
+    transform: translate(-30%, -50%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-50%, -50%);
     opacity: 1;
   }
 }
@@ -2223,7 +2243,7 @@ input[type="radio"].visually-hidden {
   letter-spacing: 3.2px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .pagination-item a:hover,
