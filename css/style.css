@@ -1375,6 +1375,8 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 960px;
@@ -1531,12 +1533,27 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
+    -webkit-transform: translate(-30%, -50%);
     transform: translate(-30%, -50%);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateX(-50%, -50%);
+    transform: translateX(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(-30%, -50%);
+    transform: translate(-30%, -50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-50%, -50%);
     transform: translateX(-50%, -50%);
     opacity: 1;
   }
@@ -1544,12 +1561,17 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   display: block;
+  -webkit-animation: bounce;
   animation: bounce;
+  -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
 }
 
 .modal-open {
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
