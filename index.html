@@ -310,7 +310,7 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сам, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a class="map" href="#">
+        <a class="map" href="map.html">
           <p class="visually-hidden">Офис компании расположен по адресу ул. Строителей, 15, Москва</p>
           <img src="https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=37.528388%2C55.687772&l=map&size=560%2C220&z=15" width="560" height="220"
             alt="Офис компании расположен по адресу ул. Строителей, 15, Москва" />
@@ -485,13 +485,16 @@
     });
 
     form.addEventListener("submit", function (evt) {
+      evt.preventDefault();
       if (!nickname.value && !mail.value){
+        evt.preventDefault();
         nickname.classList.add("feedback-form-invalid");
         nickname.classList.remove("feedback-form-static");
         mail.classList.add("feedback-form-invalid");
         mail.classList.remove("feedback-form-static");
       }
       if (!nickname.value || !mail.value){
+        evt.preventDefault();
         if (!nickname.value){
           evt.preventDefault();
           nickname.classList.add("feedback-form-invalid");
@@ -509,6 +512,28 @@
       if (evt.keyCode === 27) {
         if (popup.classList.contains("modal-show")) {
           popup.classList.remove("modal-show");
+        }
+      }
+    });
+    
+    var maplink = document.querySelector(".map");
+    var mappopup = document.querySelector(".modal-map");
+    var mapclose = mappopup.querySelector(".modal-close");
+
+    maplink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mappopup.classList.add("modal-show"); 
+    });
+
+    mapclose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mappopup.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        if (mappopup.classList.contains("modal-show")) {
+          mappopup.classList.remove("modal-show");
         }
       }
     });
