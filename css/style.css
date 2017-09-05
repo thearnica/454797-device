@@ -1513,22 +1513,16 @@ input[type="radio"].visually-hidden {
 
 @keyframes bounce {
   0% {
-    transform: translateX(100px);
+    transform: scale(0.0);
   }
-  20% {
-    transform: translateX(80px);
+  70% {
+    transform: scale(0.7);
   }
-  40% {
-    transform: translateX(60px);
-  }
-  60% {
-    transform: translateX(40px);
-  }
-  80% {
-    transform: translateX(20px);
+  90% {
+    transform: scale(0.9);
   }
   100% {
-    transform: translateX(0);
+    transform: scale(1);
   }
 }
 
